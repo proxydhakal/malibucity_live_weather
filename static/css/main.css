@@ -1,0 +1,13 @@
+body{
+    background:#4D8FAC;
+    padding: none;
+    margin: 0px;
+    top: 0px;
+    bottom: 0px;;
+}
+marquee {
+    width: 100%;
+    padding: 10px 0;
+    background-color: lightblue;
+  }
+

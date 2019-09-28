@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Malibu Live Stream: All the Latest News, Weather, Events, Traffic, Talk, Chat, Ocean</title>
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+</head>
+<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 border border-primary mt-2">
+					<h4 class="border-bottom border-primary"> Current Weather : {{city_weather.city}}</h4>
+					<iframe src="{{city_weather.map_url}}" width="250" height="200" frameborder="0" style="border:0;" allowfullscreen></iframe>
+					<b> Water Temp :</b>{{city_weather.water_temp}}° F<br>
+					<b> Air Temp :</b>{{city_weather.air_temp}} ° F<br>
+					<b> Barometic Pressure :</b>{{city_weather.pressure}} mb<br>
+					<b> Winds :</b>{{city_weather.wind}}  kts from {{city_weather.direction}}<br>
+					<b> Gusting to:</b>{{city_weather.gusting}} 1.9 kts from {{city_weather.direction}}
+					<table class="table mt-0">
+						  <thead>
+						    <tr>
+						      
+						      <th scope="col">Time</th>
+						      <th scope="col">Tide</th>
+						      <th scope="col">Height</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      
+						      <td>{{city_weather.tidetime1}}</td>
+						      <td>{{city_weather.tide1}}</td>
+						      <td>{{city_weather.tidelevel1}}</td>
+						    </tr>
+						    <tr>
+						      
+						       <td>{{city_weather.tidetime2}}</td>
+						      <td>{{city_weather.tide2}}</td>
+						      <td>{{city_weather.tidelevel2}}</td>
+						    </tr>
+						    <tr>
+						      
+						      <td>{{city_weather.tidetime3}}</td>
+						      <td>{{city_weather.tide3}}</td>
+						      <td>{{city_weather.tidelevel3}}</td>
+						    </tr>
+						 </tbody>
+					</table>
+				</div>
+				<div class="col-md-9 border border-primary mt-2">
+					<img class="mt-2" src="{% static 'images/weather.png' %}" width="100%" height="490">
+					
+    				<marquee class="mt-1 " direction="scroll">{{nwsForecast.nwsForecast1}}, {{nwsForecast.nwsForecast2}}</marquee>
+					<hr>
+					<div id="imagescollection"  class="alert alert-primary mt-2 blink" role="alert" >
+					  <div class="images" height="100"><b>Title:</b>{{rssfeed10.title1}}<br>
+					  <b>Date:</b>{{rssfeed10.lastBuildDate}}<br>
+					  {{rssfeed10.description}}</div>
+					  <div class="images" height="100"><b>Title:</b>{{rssfeed11.title1}}<br>
+					  <b>Date:</b>{{rssfeed11.lastBuildDate}}<br>
+					  {{rssfeed11.description|safe}}</div>
+					  <div class="images"><b>Title:</b>{{rssfeed12.title1}}<br>
+					  <b>Date:</b>{{rssfeed12.lastBuildDate}}<br>
+					  {{rssfeed12.description|safe}}</div>
+					  <div class="images"><b>Title:</b>{{rssfeed13.title1}}<br>
+					  <b>Date:</b>{{rssfeed13.lastBuildDate}}<br>
+					  {{rssfeed13.description|safe}}</div>
+					  <div class="images"><b>Title:</b>{{rssfeed14.title1}}<br>
+					  <b>Date:</b>{{rssfeed14.lastBuildDate}}<br>
+					  {{rssfeed14.description|safe}}</div>
+					  <div class="images"><b>Title:</b>{{rssfeed15.title1}}<br>
+					  <b>Date:</b>{{rssfeed15.lastBuildDate}}<br>
+					  {{rssfeed15.description|safe}}</div>
+					  <div class="images"><b>Title:</b>{{rssfeed16.title1}}<br>
+					  <b>Date:</b>{{rssfeed16.lastBuildDate}}<br>
+					  {{rssfeed16.description|safe}}</div>
+					  <div class="images"><b>Title:</b>{{rssfeed17.title1}}<br>
+					  <b>Date:</b>{{rssfeed17.lastBuildDate}}<br>
+					  {{rssfeed17.description|safe}}</div>
+					  <div class="images"><b>Title:</b>{{rssfeed18.title1}}<br>
+					  <b>Date:</b>{{rssfeed18.lastBuildDate}}<br>
+					  {{rssfeed18.description|safe}}</div>
+					  <div class="images"><b>Title:</b>{{rssfeed19.title1}}<br>
+					  <b>Date:</b>{{rssfeed19.lastBuildDate}}<br>
+					  {{rssfeed19.description|safe}}</div>
+					  <div class="images"><b>Title:</b>{{rssfeed20.title1}}<br>
+					  <b>Date:</b>{{rssfeed20.lastBuildDate}}<br>
+					  {{rssfeed20.description|safe}}</div>
+
+					</div>
+
+
+				</div>
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-12 border border-primary">
+    				<marquee  class="mt-1" direction="scroll"><b>Today's:</b> {{rssfeed1.title1}}{{rssfeed1.lastBuildDate}}{{rssfeed1.description}} |
+					 <b>Next Following Day's:</b> 
+					  {{rssfeed2.title1}}{{rssfeed2.lastBuildDate}}{{rssfeed2.description}} |
+					   {{rssfeed3.title1}}{{rssfeed3.lastBuildDate}}{{rssfeed3.description}} |
+					    {{rssfeed4.title1}}{{rssfeed4.lastBuildDate}}{{rssfeed4.description}} |
+						 {{rssfeed5.title1}}{{rssfeed5.lastBuildDate}}{{rssfeed5.description}} |
+						  {{rssfeed6.title1}}{{rssfeed6.lastBuildDate}}{{rssfeed6.description}} |
+						   {{rssfeed7.title1}}{{rssfeed7.lastBuildDate}}{{rssfeed7.description}} |
+						    {{rssfeed8.title1}}{{rssfeed8.lastBuildDate}}{{rssfeed8.description}} |
+							{{rssfeed9.title1}}{{rssfeed9.lastBuildDate}}{{rssfeed9.description}} |
+					 </marquee>
+				</div>
+			</div>
+		</div>
+
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+    $(document).ready(function() {
+        var images = $('.images')
+        current = 0;
+        images.hide();
+        Rotator();
+        function Rotator() {
+           $(images[current]).fadeIn('slow').delay(10000).fadeOut('slow');
+           $(images[current]).queue(function() {
+               current = current < images.length - 1 ? current + 1 : 0;
+               Rotator();
+               $(this).dequeue();
+           });
+        }
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</html>
