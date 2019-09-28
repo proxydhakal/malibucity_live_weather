@@ -129,4 +129,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     
 ]
-STATIC_ROOT = '/home/malibu/malibu/static'
+STATIC_ROOT = '/home/malibu/malibu/static_root'
