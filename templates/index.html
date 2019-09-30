@@ -8,25 +8,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 </head>
-	<style>
-		marquee {
-    width: 100%;
-    padding: 10px 0;
-    background-color: lightblue;
-  }
-	</style>
 <body>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-3 border border-primary mt-2">
-					<h4 class="border-bottom border-primary"> Current Weather : {{city_weather.city}}</h4>
-					<iframe src="{{city_weather.map_url}}" width="250" height="200" frameborder="0" style="border:0;" allowfullscreen></iframe>
-					<b> Water Temp :</b>{{city_weather.water_temp}}° F<br>
-					<b> Air Temp :</b>{{city_weather.air_temp}} ° F<br>
-					<b> Barometic Pressure :</b>{{city_weather.pressure}} mb<br>
-					<b> Winds :</b>{{city_weather.wind}}  kts from {{city_weather.direction}}<br>
-					<b> Gusting to:</b>{{city_weather.gusting}} 1.9 kts from {{city_weather.direction}}
-					<table class="table mt-0">
+				<div class="col-md-3 border border-primary mt-0">
+					<h4 class="border-bottom border-primary"> Current Weather :Malibu</h4>
+					<iframe src="{{city_weather.map_url}}" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe><br>
+					<p><b> Water Temp :</b>{{city_weather.water_temp}}° F</p>
+					<p><b> Air Temp :</b>{{city_weather.air_temp}} ° F</p>
+					<p><b> Barometic Pressure :</b>{{city_weather.pressure}} mb</p>
+					<p><b> Winds :</b>{{city_weather.wind}}  kts from {{city_weather.direction}}</p>
+					<p><b> Gusting to:</b>{{city_weather.gusting}} 1.9 kts from {{city_weather.direction}}</p>
+					<table class="table mt-2">
 						  <thead>
 						    <tr>
 						      
@@ -57,13 +50,19 @@
 						 </tbody>
 					</table>
 				</div>
-				<div class="col-md-9 border border-primary mt-2">
-					<img class="mt-2" src="{% static 'images/weather.png' %}" width="100%" height="490">
-					
+				<div class="col-md-9 border border-primary mt-0">
+				<div class="widget" style="height:487px;width=100%;background-color:#1f567c;">
+					<h2 class="mt-4 text-center" style="color:#ffffff;">MALIBU WEATHER</h2><br><br><br><br><br>
+					<a class="weatherwidget-io" href="https://forecast7.com/en/34d03n118d78/malibu/" data-label_1="MALIBU" data-label_2="WEATHER" data-theme="pure" ></a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+				</div>
     				<marquee class="mt-1 " direction="scroll">{{nwsForecast.nwsForecast1}}, {{nwsForecast.nwsForecast2}}</marquee>
 					<hr>
-					<div id="imagescollection"  class="alert alert-primary mt-2 blink" role="alert" >
-					  <div class="images" height="100"><b>Title:</b>{{rssfeed10.title1}}<br>
+					<div id="imagescollection"  class="alert alert-primary mt-2 blink" role="alert" style="height:240px;" >
+					  <div class="images" style="height:300px;"><b>Title:</b>{{rssfeed10.title1}}<br>
 					  <b>Date:</b>{{rssfeed10.lastBuildDate}}<br>
 					  {{rssfeed10.description}}</div>
 					  <div class="images" height="100"><b>Title:</b>{{rssfeed11.title1}}<br>
@@ -93,9 +92,7 @@
 					  <div class="images"><b>Title:</b>{{rssfeed19.title1}}<br>
 					  <b>Date:</b>{{rssfeed19.lastBuildDate}}<br>
 					  {{rssfeed19.description|safe}}</div>
-					  <div class="images"><b>Title:</b>{{rssfeed20.title1}}<br>
-					  <b>Date:</b>{{rssfeed20.lastBuildDate}}<br>
-					  {{rssfeed20.description|safe}}</div>
+					  
 
 					</div>
 
@@ -115,7 +112,7 @@
 						  {{rssfeed6.title1}}{{rssfeed6.lastBuildDate}}{{rssfeed6.description}} |
 						   {{rssfeed7.title1}}{{rssfeed7.lastBuildDate}}{{rssfeed7.description}} |
 						    {{rssfeed8.title1}}{{rssfeed8.lastBuildDate}}{{rssfeed8.description}} |
-							{{rssfeed9.title1}}{{rssfeed9.lastBuildDate}}{{rssfeed9.description}} |
+							{% comment %} {{rssfeed9.title1}}{{rssfeed9.lastBuildDate}}{{rssfeed9.description}} | {% endcomment %}
 					 </marquee>
 				</div>
 			</div>
@@ -146,4 +143,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="{% static 'js/main.js' %}"></script>
+
 </html>
