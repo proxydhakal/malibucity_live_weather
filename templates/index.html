@@ -8,18 +8,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 </head>
-<body>
+<body class="">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-3 border border-primary mt-0">
-					<h4 class="border-bottom border-primary"> Current Weather :Malibu</h4>
-					<iframe src="{{city_weather.map_url}}" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe><br>
-					<p><b> Water Temp :</b>{{city_weather.water_temp}}° F</p>
-					<p><b> Air Temp :</b>{{city_weather.air_temp}} ° F</p>
-					<p><b> Barometic Pressure :</b>{{city_weather.pressure}} mb</p>
-					<p><b> Winds :</b>{{city_weather.wind}}  kts from {{city_weather.direction}}</p>
-					<p><b> Gusting to:</b>{{city_weather.gusting}} 1.9 kts from {{city_weather.direction}}</p>
-					<table class="table mt-2">
+			<div class="row no-gutters border-none">
+				<div class="col-md-3 mt-0">
+					<div class="card mb-1 mt-2 p-4  rounded text-white bg-primary  border-none">
+					<h4 class="" > Current Weather :Malibu</h4>
+					<iframe class="card-img-top" src="{{city_weather.map_url}}" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+					<div class="card-body">
+						<p><b> Water Temp :</b>{{city_weather.water_temp}}° F</p>
+						<p><b> Air Temp :</b>{{city_weather.air_temp}} ° F</p>
+						<p><b> Barometic Pressure :</b>{{city_weather.pressure}} mb</p>
+						<p><b> Winds :</b>{{city_weather.wind}}  kts from {{city_weather.direction}}</p>
+						<p><b> Gusting to:</b>{{city_weather.gusting}} 1.9 kts from {{city_weather.direction}}</p>
+						<table class="table  mt-2 shadow-lg p-0 mb-1 rounded text-white">
 						  <thead>
 						    <tr>
 						      
@@ -49,19 +51,21 @@
 						    </tr>
 						 </tbody>
 					</table>
+					</div>
+					</div>
+					
+					
 				</div>
-				<div class="col-md-9 border border-primary mt-0">
-				<div class="widget" style="height:487px;width=100%;background-color:#1f567c;">
-					<h2 class="mt-4 text-center" style="color:#ffffff;">MALIBU WEATHER</h2><br><br><br><br><br>
-					<a class="weatherwidget-io" href="https://forecast7.com/en/34d03n118d78/malibu/?unit=us" data-label_1="MALIBU" data-label_2="WEATHER" data-font="Times New Roman" data-icons="Climacons Animated" data-theme="gray" ></a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-
+				<div class="col-md-9  mt-2">
+				<div class="card  text-white bg-primary  border-none">
+				
+					<iframe  class="card-img-top" src="http://g1.ipcamlive.com/player/player.php?alias=malibu" width="100%" height="490px" 
+					frameborder="0" allowfullscreen></iframe>
+					<div class="card-body">
+						<marquee class="mt-1 text-white bg-danger " direction="scroll">{{nwsForecast.nwsForecast1}}, {{nwsForecast.nwsForecast2}}</marquee>
+					</div>
 				</div>
-    				<marquee class="mt-1 " direction="scroll">{{nwsForecast.nwsForecast1}}, {{nwsForecast.nwsForecast2}}</marquee>
-					<hr>
-					<div id="imagescollection"  class="alert alert-primary mt-2 blink" role="alert" style="height:240px;" >
+					<div id="imagescollection"  class="alert alert-primary border-none mt-0 blink  text-white bg-danger" role="alert" style="height:240px;" >
 					  <div class="images" style="height:300px;"><b>Title:</b>{{rssfeed10.title1}}<br>
 					  <b>Date:</b>{{rssfeed10.lastBuildDate}}<br>
 					  {{rssfeed10.description}}</div>
@@ -100,10 +104,9 @@
 				</div>
 			</div>
 			
-			<div class="row">
-				
-				<div class="col-md-12 border border-primary">
-    				<marquee  class="mt-1" direction="scroll"><b>Today's:</b> {{rssfeed1.title1}}{{rssfeed1.lastBuildDate}}{{rssfeed1.description}} |
+			<div class="row no-gutters border-0">
+				<div class="col-md-12">
+    				<marquee  class="mt-0  text-white bg-danger" direction="scroll"><b>Today's:</b> {{rssfeed1.title1}}{{rssfeed1.lastBuildDate}}{{rssfeed1.description}} |
 					 <b>Next Following Day's:</b> 
 					  {{rssfeed2.title1}}{{rssfeed2.lastBuildDate}}{{rssfeed2.description}} |
 					   {{rssfeed3.title1}}{{rssfeed3.lastBuildDate}}{{rssfeed3.description}} |
@@ -112,7 +115,7 @@
 						  {{rssfeed6.title1}}{{rssfeed6.lastBuildDate}}{{rssfeed6.description}} |
 						   {{rssfeed7.title1}}{{rssfeed7.lastBuildDate}}{{rssfeed7.description}} |
 						    {{rssfeed8.title1}}{{rssfeed8.lastBuildDate}}{{rssfeed8.description}} |
-							{% comment %} {{rssfeed9.title1}}{{rssfeed9.lastBuildDate}}{{rssfeed9.description}} | {% endcomment %}
+							{{rssfeed9.title1}}{{rssfeed9.lastBuildDate}}{{rssfeed9.description}} |
 					 </marquee>
 				</div>
 			</div>
