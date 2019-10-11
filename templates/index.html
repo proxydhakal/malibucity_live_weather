@@ -8,11 +8,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 </head>
-<body class="">
+<body class="p-0">
 		<div class="container-fluid">
 			<div class="row no-gutters border-none">
-				<div class="col-md-3 mt-0">
-					<div class="card mb-1 mt-2 p-4  rounded text-white bg-primary  border-none">
+				<div class="col-md-3">
+					<div class="card mb-1 p-5 text-white bg-primary  border-none">
 					<h4 class="" > Current Weather :Malibu</h4>
 					<iframe class="card-img-top" src="{{city_weather.map_url}}" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
 					<div class="card-body">
@@ -56,46 +56,46 @@
 					
 					
 				</div>
-				<div class="col-md-9  mt-2">
+				<div class="col-md-9">
 				<div class="card  text-white bg-primary  border-none">
 				
-					<iframe  class="card-img-top" src="http://g1.ipcamlive.com/player/player.php?alias=malibu" width="100%" height="490px" 
-					frameborder="0" allowfullscreen></iframe>
+					<iframe  class="card-img-top" src="http://g1.ipcamlive.com/player/player.php?alias=malibu" width="100%" height="509px" 
+					frameborder="0" ></iframe>
 					<div class="card-body">
-						<marquee class="mt-1 text-white bg-danger " direction="scroll">{{nwsForecast.nwsForecast1}}, {{nwsForecast.nwsForecast2}}</marquee>
+						<marquee class="mt-1 p-3 text-white bg-secondary " direction="scroll"><h4>{{nwsForecast.nwsForecast1}}, {{nwsForecast.nwsForecast2}}</h4></marquee>
 					</div>
 				</div>
-					<div id="imagescollection"  class="alert alert-primary border-none mt-0 blink  text-white bg-danger" role="alert" style="height:240px;" >
-					  <div class="images" style="height:300px;"><b>Title:</b>{{rssfeed10.title1}}<br>
+					<div id="imagescollection"  class="card alert alert-primary border-none blink  text-white bg-secondary p-1" role="alert" style="height:245px;" >
+					  <div class="images" style="height:305px;font-size:20px;"><b>Title:</b>{{rssfeed10.title1}}<br>
 					  <b>Date:</b>{{rssfeed10.lastBuildDate}}<br>
 					  {{rssfeed10.description}}</div>
-					  <div class="images" height="100"><b>Title:</b>{{rssfeed11.title1}}<br>
+					  <div class="images"style="height:300px;font-size:20px;"><b>Title:</b>{{rssfeed11.title1}}<br>
 					  <b>Date:</b>{{rssfeed11.lastBuildDate}}<br>
-					  {{rssfeed11.description|safe}}</div>
-					  <div class="images"><b>Title:</b>{{rssfeed12.title1}}<br>
+					  {{rssfeed11.description|safe|truncatewords:50}}</div>
+					  <div class="images" style="height:300px;font-size:20px;"><b>Title:</b>{{rssfeed12.title1}}<br>
 					  <b>Date:</b>{{rssfeed12.lastBuildDate}}<br>
-					  {{rssfeed12.description|safe}}</div>
-					  <div class="images"><b>Title:</b>{{rssfeed13.title1}}<br>
+					  {{rssfeed12.description|safe|truncatewords:50}}</div>
+					  <div class="images" style="height:300px;font-size:20px;"><b>Title:</b>{{rssfeed13.title1}}<br>
 					  <b>Date:</b>{{rssfeed13.lastBuildDate}}<br>
-					  {{rssfeed13.description|safe}}</div>
-					  <div class="images"><b>Title:</b>{{rssfeed14.title1}}<br>
+					  {{rssfeed13.description|safe|truncatewords:50}}</div>
+					  <div class="images" style="height:300px;font-size:20px;"><b>Title:</b>{{rssfeed14.title1}}<br>
 					  <b>Date:</b>{{rssfeed14.lastBuildDate}}<br>
-					  {{rssfeed14.description|safe}}</div>
-					  <div class="images"><b>Title:</b>{{rssfeed15.title1}}<br>
+					  {{rssfeed14.description|safe|truncatewords:50}}</div>
+					  <div class="images" style="height:300px;font-size:20px;"><b>Title:</b>{{rssfeed15.title1}}<br>
 					  <b>Date:</b>{{rssfeed15.lastBuildDate}}<br>
-					  {{rssfeed15.description|safe}}</div>
-					  <div class="images"><b>Title:</b>{{rssfeed16.title1}}<br>
+					  {{rssfeed15.description|safe|truncatewords:50}}</div>
+					  <div class="images" style="height:300px;font-size:20px;"><b>Title:</b>{{rssfeed16.title1}}<br>
 					  <b>Date:</b>{{rssfeed16.lastBuildDate}}<br>
-					  {{rssfeed16.description|safe}}</div>
-					  <div class="images"><b>Title:</b>{{rssfeed17.title1}}<br>
+					  {{rssfeed16.description|safe|truncatewords:50}}</div>
+					  <div class="images" style="height:300px;font-size:20px;"><b>Title:</b>{{rssfeed17.title1}}<br>
 					  <b>Date:</b>{{rssfeed17.lastBuildDate}}<br>
-					  {{rssfeed17.description|safe}}</div>
-					  <div class="images"><b>Title:</b>{{rssfeed18.title1}}<br>
+					  {{rssfeed17.description|safe|truncatewords:50}}</div>
+					  <div class="images" style="height:300px;font-size:20px;"><b>Title:</b>{{rssfeed18.title1}}<br>
 					  <b>Date:</b>{{rssfeed18.lastBuildDate}}<br>
-					  {{rssfeed18.description|safe}}</div>
-					  <div class="images"><b>Title:</b>{{rssfeed19.title1}}<br>
+					  {{rssfeed18.description|safe|truncatewords:50}}</div>
+					  <div class="images" style="height:300px;font-size:20px;"><b>Title:</b>{{rssfeed19.title1}}<br>
 					  <b>Date:</b>{{rssfeed19.lastBuildDate}}<br>
-					  {{rssfeed19.description|safe}}</div>
+					  {{rssfeed19.description|safe|truncatewords:50}}</div>
 					  
 
 					</div>
@@ -106,7 +106,7 @@
 			
 			<div class="row no-gutters border-0">
 				<div class="col-md-12">
-    				<marquee  class="mt-0  text-white bg-danger" direction="scroll"><b>Today's:</b> {{rssfeed1.title1}}{{rssfeed1.lastBuildDate}}{{rssfeed1.description}} |
+    				<marquee  class="mt-0 p-3  text-white bg-secondary" direction="scroll"><h4><b>Today's:</b> {{rssfeed1.title1}}{{rssfeed1.lastBuildDate}}{{rssfeed1.description}} |
 					 <b>Next Following Day's:</b> 
 					  {{rssfeed2.title1}}{{rssfeed2.lastBuildDate}}{{rssfeed2.description}} |
 					   {{rssfeed3.title1}}{{rssfeed3.lastBuildDate}}{{rssfeed3.description}} |
@@ -115,7 +115,7 @@
 						  {{rssfeed6.title1}}{{rssfeed6.lastBuildDate}}{{rssfeed6.description}} |
 						   {{rssfeed7.title1}}{{rssfeed7.lastBuildDate}}{{rssfeed7.description}} |
 						    {{rssfeed8.title1}}{{rssfeed8.lastBuildDate}}{{rssfeed8.description}} |
-							{{rssfeed9.title1}}{{rssfeed9.lastBuildDate}}{{rssfeed9.description}} |
+							{{rssfeed9.title1}}{{rssfeed9.lastBuildDate}}{{rssfeed9.description}} |</h4>
 					 </marquee>
 				</div>
 			</div>
