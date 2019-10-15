@@ -71,10 +71,10 @@ def home(request):
     rssfeed3={'title1':title[2],'lastBuildDate':pubDate[1],'description':description[2]}
     rssfeed4={'title1':title[3],'lastBuildDate':pubDate[2],'description':description[3]}
     rssfeed5={'title1':title[4],'lastBuildDate':pubDate[3],'description':description[4]}
-    rssfeed6={'title1':title[5],'lastBuildDate':pubDate[4],'description':description[5]}
-    rssfeed7={'title1':title[6],'lastBuildDate':pubDate[5],'description':description[6]}
-    rssfeed8={'title1':title[7],'lastBuildDate':pubDate[6],'description':description[7]}
-    #rssfeed9={'title1':title[8],'lastBuildDate':pubDate[7],'description':description[8]}
+    #rssfeed6={'title1':title[5],'lastBuildDate':pubDate[4],'description':description[5]}
+    # rssfeed7={'title1':title[6],'lastBuildDate':pubDate[5],'description':description[6]}
+    # rssfeed8={'title1':title[7],'lastBuildDate':pubDate[6],'description':description[7]}
+    # rssfeed9={'title1':title[8],'lastBuildDate':pubDate[7],'description':description[8]}
     
 
     r = requests.get('https://www.malibucity.org/RSSFeed.aspx?ModID=58&CID=All-calendar.xml')
@@ -100,9 +100,14 @@ def home(request):
     rssfeed18={'title1':title1[8],'lastBuildDate':pubDate1[7],'description':description1[8]}
     rssfeed19={'title1':title1[9],'lastBuildDate':pubDate1[8],'description':description1[9]}
     rssfeed20={'title1':title1[10],'lastBuildDate':pubDate1[9],'description':description1[10]}
+
+
+
     context={"city_weather":city_weather,"nwsForecast":nwsForecast,"rssfeed1":rssfeed1,"rssfeed2":rssfeed2,"rssfeed3":rssfeed3,"rssfeed4":rssfeed4,
-    "rssfeed5":rssfeed5,"rssfeed6":rssfeed6,"rssfeed7":rssfeed7,"rssfeed8":rssfeed8,"rssfeed9":rssfeed8,"rssfeed10":rssfeed10,
+    "rssfeed5":rssfeed5,"rssfeed6":rssfeed3,"rssfeed7":rssfeed2,"rssfeed8":rssfeed5,"rssfeed9":rssfeed4,"rssfeed10":rssfeed10,
     "rssfeed11":rssfeed11,"rssfeed12":rssfeed12,"rssfeed13":rssfeed13,"rssfeed14":rssfeed14,"rssfeed15":rssfeed15 ,"rssfeed16":rssfeed16 ,"rssfeed17":rssfeed17
     ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20
     }
+    
+
     return render(request,template_name,context)
