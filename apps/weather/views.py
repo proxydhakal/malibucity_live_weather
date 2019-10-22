@@ -9,7 +9,7 @@ datetime_object = datetime.strptime('Jun 1 2005  1:33PM', '%b %d %Y %I:%M%p')
 # Create your views here.
 
 def home(request):
-    template_name='index.html'
+    template_name='home.html'
     station='9410840'
     airTemp_url ='https://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station={}&product=air_temperature&datum=STND&time_zone=lst_ldt&units=english&format=json'
     waterTemp_url='https://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station={}&product=water_temperature&datum=STND&time_zone=lst_ldt&units=english&format=json'
@@ -71,7 +71,7 @@ def home(request):
     rssfeed3={'title1':title[2],'lastBuildDate':pubDate[1],'description':description[2]}
     rssfeed4={'title1':title[3],'lastBuildDate':pubDate[2],'description':description[3]}
     rssfeed5={'title1':title[4],'lastBuildDate':pubDate[3],'description':description[4]}
-    #rssfeed6={'title1':title[5],'lastBuildDate':pubDate[4],'description':description[5]}
+    rssfeed6={'title1':title[5],'lastBuildDate':pubDate[4],'description':description[5]}
     # rssfeed7={'title1':title[6],'lastBuildDate':pubDate[5],'description':description[6]}
     # rssfeed8={'title1':title[7],'lastBuildDate':pubDate[6],'description':description[7]}
     # rssfeed9={'title1':title[8],'lastBuildDate':pubDate[7],'description':description[8]}
@@ -101,13 +101,31 @@ def home(request):
     rssfeed19={'title1':title1[9],'lastBuildDate':pubDate1[8],'description':description1[9]}
     rssfeed20={'title1':title1[10],'lastBuildDate':pubDate1[9],'description':description1[10]}
 
-
+    r2 = requests.get('https://www.malibucity.org/RSSFeed.aspx?ModID=63&CID=Traffic-Advisories-3')
+    data = r2.text
+    soup = BeautifulSoup(data, "xml")
+    title2 =[data.text for data in soup.findAll('title')]
+    lastBuildDate2 =[data.text for data in soup.findAll('lastBuildDate')]
+    description2 =[data.text for data in soup.findAll('description')]
+    pubDate2 =[data.text for data in soup.findAll('pubDate')]
+    rssfeed21={'title1':title2[0],'lastBuildDate':lastBuildDate2[0],'description':description2[0]}
+    rssfeed22={'title1':title2[1],'lastBuildDate':pubDate2[0],'description':description2[1]}
+    rssfeed23={'title1':title2[2],'lastBuildDate':pubDate2[1],'description':description2[2]}
+    rssfeed24={'title1':title2[3],'lastBuildDate':pubDate2[2],'description':description2[3]}
+    rssfeed25={'title1':title2[4],'lastBuildDate':pubDate2[3],'description':description2[4]}
+    # rssfeed26={'title1':title2[5],'lastBuildDate':pubDate2[4],'description':description2[5]}
 
     context={"city_weather":city_weather,"nwsForecast":nwsForecast,"rssfeed1":rssfeed1,"rssfeed2":rssfeed2,"rssfeed3":rssfeed3,"rssfeed4":rssfeed4,
-    "rssfeed5":rssfeed5,"rssfeed6":rssfeed3,"rssfeed7":rssfeed2,"rssfeed8":rssfeed5,"rssfeed9":rssfeed4,"rssfeed10":rssfeed10,
+    "rssfeed5":rssfeed5,"rssfeed6":rssfeed6,"rssfeed7":rssfeed6,"rssfeed8":rssfeed5,"rssfeed9":rssfeed4,"rssfeed10":rssfeed10,
     "rssfeed11":rssfeed11,"rssfeed12":rssfeed12,"rssfeed13":rssfeed13,"rssfeed14":rssfeed14,"rssfeed15":rssfeed15 ,"rssfeed16":rssfeed16 ,"rssfeed17":rssfeed17
-    ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20
+    ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20,"rssfeed21":rssfeed21,"rssfeed22":rssfeed22,"rssfeed23":rssfeed23,"rssfeed24":rssfeed24
+    ,"rssfeed25":rssfeed25,"rssfeed26":rssfeed25
     }
     
 
     return render(request,template_name,context)
+
+def index(request):
+    template_name='home.html'
+
+    return render(request, template_name)
