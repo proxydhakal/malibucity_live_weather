@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Malibu Live Stream: All the Latest News, Weather, Events, Traffic, Talk, Chat, Ocean</title>
+	
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-12 col-lg-4 left-container">
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="7000">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+				<div class="container">
+				<h3><i>Sigalert and Surf Center: Malibu</i></h3>
+				<div class="left-box">
+					<iframe class="w-50" src="{{city_weather.map_url}}"  height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+				</div>
+				<div class="wrapper">
+					<div class="row">
+						<div class="col">
+							<img class="img-water-temp" src="{% static 'img/water_temp.png' %}">
+							<span class="parameter-value">{{city_weather.water_temp}}<sup class="sup-text"> * F</sup></span>
+						</div>
+						<div class="col">
+								<img class="img-air-temp" src="{% static 'img/air_temp.png' %}">
+								<span class="parameter-value"{{city_weather.air_temp}}<sup class="sup-text"> * F</sup></span>
+						</div>
+						<div class="w-100"></div>
+						<div class="col">
+								<img class="img-barometric" src="{% static 'img/barometric_pressure.png' %}">
+								<span class="parameter-value">{{city_weather.pressure}}<sup class="sup-text"> mb</sup></span>
+						</div>
+						<div class="w-100"></div>
+						<div class="col">
+							<img class="img-gusting" src="{% static 'img/gusting_to.png' %}">
+							<span class="parameter-value">{{city_weather.gusting}}
+								<sup class="sup-text">kts from  {{city_weather.direction}}
+								</sup>
+							</span>	
+						</div>
+						<div class="col">
+							<img class="img-winds" src="{% static 'img/winds.png' %}">
+							<span class="parameter-value">{{city_weather.wind}}<sup class="sup-text"> kts from  {{city_weather.direction}}</sup></span>
+						</div>
+					</div> <!--End of row-->
+
+					<table class="table table-borderless">
+						<thead>
+							<tr>
+								<th scope="col">TIME</th>
+								<th scope="col">TIDE</th>
+								<th scope="col">HEIGHT</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+						      
+						      <td>{{city_weather.tidetime1}}</td>
+						      <td>{{city_weather.tide1}}</td>
+						      <td>{{city_weather.tidelevel1}}</td>
+						    </tr>
+						    <tr>
+						      
+						       <td>{{city_weather.tidetime2}}</td>
+						      <td>{{city_weather.tide2}}</td>
+						      <td>{{city_weather.tidelevel2}}</td>
+						    </tr>
+						    <tr>
+						      
+						      <td>{{city_weather.tidetime3}}</td>
+						      <td>{{city_weather.tide3}}</td>
+						      <td>{{city_weather.tidelevel3}}</td>
+						    </tr>
+						</tbody>
+					</table> <!--End of table-->
+				</div><!--End of wrapper-->
+			</div>
+				</div>
+				<div class="carousel-item">
+						<div class="container">
+				<h3><i>Twitter, Instagram and Comment Feed</i></h3>
+				<div class="card text-white mb-3">
+				  <div class="card-header">Twitter Feed</div>
+				  
+				    
+				   <a class=" card-body twitter-timeline mt-0" data-height="200" data-link-color="#2B7BB9" href="https://twitter.com/TheMalibuTimes?ref_src=twsrc%5Etfw">Tweets by TheMalibuTimes</a>
+					
+				  
+				</div>
+				<div class="card text-white mb-3">
+				  <div class="card-header">Instagram Feed</div>
+				  <div class="card-body">
+				    <h5 class="card-title">Primary card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  </div>
+				</div>
+
+				<div class="card text-white mb-3">
+				  <div class="card-header">Comment Center</div>
+				  <div class="card-body">
+				    <h5 class="card-title">Primary card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  </div>
+				</div>
+			</div>
+				</div>
+				
+			</div>
+			</div><!--End of container-->
+		</div>	<!--End of left-container-->
+
+		<div class="col-md-12 col-lg-8 right-container">
+			<div class="headline">
+				<marquee direction="scroll"><p>{{nwsForecast.nwsForecast1}}, {{nwsForecast.nwsForecast2}}</p></marquee>
+			</div>
+			<div class="section-1"></div>
+			<div class="section-2">
+				<img class="img-live-stream" alt="Live Stream Logo" src="{% static 'img/channel-03.png' %}">
+				<div class="wrap">
+					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  data-interval="10000">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<b>Title:</b>{{rssfeed10.title1}}<br>
+								
+									{{rssfeed10.description}}
+							</div>
+							<div class="carousel-item">
+								<b>Title:</b>{{rssfeed11.title1}}<br>
+								
+									{{rssfeed11.description|safe|truncatewords:40}}
+							</div>
+							<div class="carousel-item">
+								<b>Title:</b>{{rssfeed12.title1}}<br>
+								
+									{{rssfeed13.description|safe|truncatewords:40}}
+							</div>
+							<div class="carousel-item">
+								<b>Title:</b>{{rssfeed13.title1}}<br>
+								
+									{{rssfeed13.description|safe|truncatewords:40}}
+							</div>
+							<div class="carousel-item">
+								<b>Title:</b>{{rssfeed14.title1}}<br>
+								
+									{{rssfeed14.description|safe|truncatewords:40}}
+							</div>
+							<div class="carousel-item">
+								<b>Title:</b>{{rssfeed15.title1}}<br>
+								
+									{{rssfeed15.description|safe|truncatewords:40}}
+							</div>
+							<div class="carousel-item">
+								<b>Title:</b>{{rssfeed16.title1}}<br>
+								
+									{{rssfeed16.description|safe|truncatewords:40}}
+							</div>
+							<div class="carousel-item">
+								<b>Title:</b>{{rssfeed17.title1}}<br>
+								
+									{{rssfeed17.description|safe|truncatewords:40}}
+							</div>
+							<div class="carousel-item">
+								<b>Title:</b>{{rssfeed18.title1}}<br>
+								
+									{{rssfeed18.description|safe|truncatewords:40}}
+							</div>
+							<div class="carousel-item">
+								<b>Title:</b>{{rssfeed19.title1}}<br>
+								
+									{{rssfeed19.description|safe|truncatewords:40}}
+							</div>
+						</div>
+						</div>
+				</div>
+			</div><!--End of section-2-->
+		</div> 	<!--End of right-container-->	
+	</div> <!--End of row-->
+
+	<div class="footer">
+		<img class="img-web-address" alt="Web-Address" src="{% static 'img/web_address.png' %}">
+		<div class="footline">
+			<marquee direction="scroll"><p><b>Today's:</b> {{rssfeed1.title1}}{{rssfeed1.lastBuildDate}}{{rssfeed1.description}} |
+					 <b>Next Following Day's:</b> 
+					  {{rssfeed2.title1}}{{rssfeed2.lastBuildDate}}{{rssfeed2.description}} |
+					   {{rssfeed3.title1}}{{rssfeed3.lastBuildDate}}{{rssfeed3.description}} |
+					    {{rssfeed4.title1}}{{rssfeed4.lastBuildDate}}{{rssfeed4.description}} |
+						 {{rssfeed5.title1}}{{rssfeed5.lastBuildDate}}{{rssfeed5.description}} |
+						  {{rssfeed6.title1}}{{rssfeed6.lastBuildDate}}{{rssfeed6.description}} |
+						   {{rssfeed7.title1}}{{rssfeed7.lastBuildDate}}{{rssfeed7.description}} |
+						    {{rssfeed8.title1}}{{rssfeed8.lastBuildDate}}{{rssfeed8.description}} |
+							{{rssfeed9.title1}}{{rssfeed9.lastBuildDate}}{{rssfeed9.description}} |</p>
+					 </marquee>
+		</div>
+	</div><!--End of footer-->
+
+</body>
+{% comment %} <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+    $(document).ready(function() {
+        var images = $('.images')
+        current = 0;
+        images.hide();
+        Rotator();
+        function Rotator() {
+           $(images[current]).fadeIn('slow').delay(1000).fadeOut('slow');
+           $(images[current]).queue(function() {
+               current = current < images.length - 1 ? current + 1 : 0;
+               Rotator();
+               $(this).dequeue();
+           });
+        }
+    });
+</script> {% endcomment %}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
