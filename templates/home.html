@@ -11,13 +11,13 @@
 <body>
 	<div class="row">
 		<div class="col-md-12 col-lg-4 left-container">
-		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="7000">
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="5000">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 				<div class="container">
 				<h3><i>Sigalert and Surf Center: Malibu</i></h3>
 				<div class="left-box">
-					<iframe class="w-50" src="{{city_weather.map_url}}"  height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+					<iframe class="w-100" src="{{city_weather.map_url}}"  height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
 				</div>
 				<div class="wrapper">
 					<div class="row">
@@ -82,34 +82,31 @@
 				</div>
 				<div class="carousel-item">
 						<div class="container">
-				<h3><i>Twitter, Instagram and Comment Feed</i></h3>
+				<h3><i>Twitter Feed</i></h3>
 				<div class="card text-white mb-3">
-				  <div class="card-header">Twitter Feed</div>
-				  
-				    
-				   <a class=" card-body twitter-timeline mt-0" data-height="200" data-link-color="#2B7BB9" href="https://twitter.com/TheMalibuTimes?ref_src=twsrc%5Etfw">Tweets by TheMalibuTimes</a>
-					
-				  
-				</div>
-				<div class="card text-white mb-3">
-				  <div class="card-header">Instagram Feed</div>
-				  <div class="card-body">
-				    <h5 class="card-title">Primary card title</h5>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				  </div>
-				</div>
-
-				<div class="card text-white mb-3">
-				  <div class="card-header">Comment Center</div>
-				  <div class="card-body">
-				    <h5 class="card-title">Primary card title</h5>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				  </div>
+				   <a class=" card-body twitter-timeline mt-0" data-height="750" data-link-color="#2B7BB9" href="https://twitter.com/TheMalibuTimes?ref_src=twsrc%5Etfw">Tweets by TheMalibuTimes</a>  
 				</div>
 			</div>
 				</div>
-				
+			<div class="carousel-item">
+					<div class="container">
+					<h3><i>Instagram Feed</i></h3>
+						<div class="card text-white mb-3">
+							<div class='sk-ww-instagram-hashtag-feed' data-embed-id='29959'></div><script src='https://www.sociablekit.com/app/embed/instagram-hashtag-feed/widget.js'></script>
+							
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+					<h3><i>Comment Feed</i></h3>
+						<div class="card text-white mb-3">
+						<iframe class="card-body w-100" src="https://chat.restream.io/embed?token=befa2567-e78f-47a9-8c49-0a43224fc2ad" height="750"></iframe>
+						</div>
+					</div>
+				</div>
 			</div>
+			
 			</div><!--End of container-->
 		</div>	<!--End of left-container-->
 
@@ -121,7 +118,7 @@
 			<div class="section-2">
 				<img class="img-live-stream" alt="Live Stream Logo" src="{% static 'images/channel-03.png' %}">
 				<div class="wrap">
-					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  data-interval="10000">
+					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  data-interval="7000">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<b>Title:</b>{{rssfeed10.title1}}<br>
