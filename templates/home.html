@@ -11,13 +11,51 @@
 <body>
 	<div class="row">
 		<div class="col-md-12 col-lg-4 left-container">
-		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="5000">
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="15000">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 				<div class="container">
-				<h3><i>Sigalert and Surf Center: Malibu</i></h3>
+				<h3><i>Traffic Center: Malibu</i></h3>
 				<div class="left-box">
 					<iframe class="w-100" src="{{city_weather.map_url}}"  height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+				</div>
+				<div class="wrapper">
+
+						<div class="ashok">
+							 <marquee behavior="scroll" direction = "up" height="400" scrolldelay="4" scrollamount="4">
+								<b>Title:</b>{{rssfeed21.title1}}<br>
+								<b>Date:</b>{{rssfeed21.lastBuildDate}}<br>
+								<b>Description</b>{{rssfeed21.description}}
+								<hr>
+								<b>Title:</b>{{rssfeed22.title1}}<br>
+								<b>Date:</b>{{rssfeed22.lastBuildDate}}<br>
+								<b>Description</b>{{rssfeed22.description}}
+								<hr>
+								<b>Title:</b>{{rssfeed23.title1}}<br>
+								<b>Date:</b>{{rssfeed23.lastBuildDate}}<br>
+								<b>Description</b>{{rssfeed23.description}}
+								<hr>
+								<b>Title:</b>{{rssfeed24.title1}}<br>
+								<b>Date:</b>{{rssfeed24.lastBuildDate}}<br>
+								<b>Description</b>{{rssfeed24.description}}
+								<hr>
+								<b>Title:</b>{{rssfeed25.title1}}<br>
+								<b>Date:</b>{{rssfeed25.lastBuildDate}}<br>
+								<b>Description</b>{{rssfeed25.description}}
+								<hr>
+								<b>Title:</b>{{rssfeed26.title1}}<br>
+								<b>Date:</b>{{rssfeed26.lastBuildDate}}<br>
+								<b>Description</b>{{rssfeed26.description}}
+								</marquee>
+							</div>
+				</div><!--End of wrapper-->
+			</div>
+				</div>
+				<div class="carousel-item">
+				<div class="container">
+				<h3><i>Sigalert and Surf Center: Malibu</i></h3>
+				<div class="left-box">
+					<iframe width="100%" height="300" src="https://embed.windy.com/embed2.html?lat=33.669&lon=-118.125&zoom=8&level=surface&overlay=waves&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=33.669&detailLon=-118.123&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
 				</div>
 				<div class="wrapper">
 					<div class="row">
@@ -81,6 +119,19 @@
 			</div>
 				</div>
 				<div class="carousel-item">
+				<div class="container">
+				<h3><i>Weather Center: Malibu</i></h3>
+				<div class="left-box mb-3">
+					<iframe width="100%" height="300" src="https://embed.windy.com/embed2.html?lat=33.633&lon=-118.600&zoom=9&level=surface&overlay=temp&menu=&message=&marker=&calendar=24&pressure=&type=map&location=coordinates&detail=&detailLat=33.633&detailLon=-118.600&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
+				</div>
+				<div class="wrapper  mt-3">
+					<a class="weatherwidget-io" href="https://forecast7.com/en/34d03n118d78/malibu/?unit=us" data-label_1="MALIBU" data-label_2="WEATHER" data-font="Times New Roman" data-icons="Climacons Animated" data-theme="original" >MALIBU WEATHER</a>
+
+
+				</div><!--End of wrapper-->
+			</div>
+				</div>
+				<div class="carousel-item">
 						<div class="container">
 				<h3><i>Twitter Feed</i></h3>
 				<div class="card text-white mb-3">
@@ -92,7 +143,7 @@
 					<div class="container">
 					<h3><i>Instagram Feed</i></h3>
 						<div class="card text-white mb-3">
-							<div class='sk-ww-instagram-hashtag-feed' data-embed-id='29959'></div><script src='https://www.sociablekit.com/app/embed/instagram-hashtag-feed/widget.js'></script>
+							<div class='sk-ww-instagram-hashtag-feed' data-embed-id='30069'></div><script src='https://www.sociablekit.com/app/embed/instagram-hashtag-feed/widget.js'></script>
 							
 						</div>
 					</div>
@@ -195,24 +246,21 @@
 	</div><!--End of footer-->
 
 </body>
-{% comment %} <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+<script>
+var current = 0;
+
+setInterval(function() {
+  var divs = $(".roll").hide();
+  divs.eq(current).fadeIn("normal");
+  if (current < divs.length - 1)
+    current++;
+  else
+    current = 0;
+}, 1000);
 </script>
 <script>
-    $(document).ready(function() {
-        var images = $('.images')
-        current = 0;
-        images.hide();
-        Rotator();
-        function Rotator() {
-           $(images[current]).fadeIn('slow').delay(1000).fadeOut('slow');
-           $(images[current]).queue(function() {
-               current = current < images.length - 1 ? current + 1 : 0;
-               Rotator();
-               $(this).dequeue();
-           });
-        }
-    });
-</script> {% endcomment %}
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
