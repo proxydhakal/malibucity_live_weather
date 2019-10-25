@@ -1,8 +1,8 @@
 body{
-	background-color: #00A99D!important;
+	background-color: #1f0b16!important; /* For browsers that do not support gradients */
+	background-image: linear-gradient(to top left, #191418, #30032a, #1f262d, #072a46  );
 	width: 99.1%;
 	height: auto;
-	background-image: linear-gradient(to bottom left, #00A99D, #22B573, #00A99D, #29ABE2  );
 	background-repeat: no-repeat;
 }
 
@@ -11,6 +11,13 @@ body{
 	padding-right: 0!important;
 }
 
+.ashok{
+	border: 1px solid #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5rem!important;
+	color: #fff;
+
+}
 /****Left Container****/
 .wrapper{
 	margin:30px 15px;
@@ -91,22 +98,6 @@ th, td {
 	  border-bottom: 1px solid #fff;
 	  text-align: center;
   }
-
-
-.card{
-	height: 750px;
-	background-color:inherit!important;
-	border:1px solid #fff!important;
-}
-.card-body{
-	
-	background-color:inherit!important;
-	
-}
-.card-header{
-	border-bottom:1px solid #fff!important;
-}
-
 /****Right Container****/
 .col-mg-8, .col-lg-8{
 	padding: 0!important;
@@ -119,17 +110,16 @@ th, td {
 	line-height: 60px;
 	font-size: 26px;
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #0071BC  ;
+	background-color: #052035 ;
 	overflow: hidden;
 	border-right: 12px solid #C1272D;
 	border-left: 12px solid #C1272D;
 }
 
 .section-1{
-	background-color: #fff;
+	background-color: #281C26;
 	height: 560px;
 	width: 100%;
-
 }
 
 .section-2{
@@ -141,7 +131,6 @@ th, td {
 .wrap{
 	padding: 12px 12px 5px 12px;
 	font-family: Arial, Helvetica, sans-serif;
-	/*font-size: 35px;*/
 	color: #fff;
 }
 h6{
@@ -155,7 +144,6 @@ h6{
 	margin-left: 85%;
 }
 /*****Footer Headline ******/
-
 .footline{
 	position: fixed;
 	bottom: 0;
@@ -166,7 +154,7 @@ h6{
 	line-height: 60px;
 	font-size: 26px;
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #0071BC  ;
+	background-color: #052035 ;
 	overflow: hidden;
 	border-right: 12px solid #C1272D;
 }
@@ -177,4 +165,5 @@ h6{
 	left: 0;
 	width: 320px;
 	z-index: 1;
+
 }
