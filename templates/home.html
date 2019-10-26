@@ -60,28 +60,28 @@
 				<div class="wrapper">
 					<div class="row">
 						<div class="col">
-							<img class="img-water-temp" src="{% static 'img/water_temp.png' %}">
+							<img class="img-water-temp" src="{% static 'images/water_temp.png' %}">
 							<span class="parameter-value">{{city_weather.water_temp}}<sup class="sup-text"> * F</sup></span>
 						</div>
 						<div class="col">
-								<img class="img-air-temp" src="{% static 'img/air_temp.png' %}">
+								<img class="img-air-temp" src="{% static 'images/air_temp.png' %}">
 								<span class="parameter-value"{{city_weather.air_temp}}<sup class="sup-text"> * F</sup></span>
 						</div>
 						<div class="w-100"></div>
 						<div class="col">
-								<img class="img-barometric" src="{% static 'img/barometric_pressure.png' %}">
+								<img class="img-barometric" src="{% static 'images/barometric_pressure.png' %}">
 								<span class="parameter-value">{{city_weather.pressure}}<sup class="sup-text"> mb</sup></span>
 						</div>
 						<div class="w-100"></div>
 						<div class="col">
-							<img class="img-gusting" src="{% static 'img/gusting_to.png' %}">
+							<img class="img-gusting" src="{% static 'images/gusting_to.png' %}">
 							<span class="parameter-value">{{city_weather.gusting}}
 								<sup class="sup-text">kts from  {{city_weather.direction}}
 								</sup>
 							</span>	
 						</div>
 						<div class="col">
-							<img class="img-winds" src="{% static 'img/winds.png' %}">
+							<img class="img-winds" src="{% static 'images/winds.png' %}">
 							<span class="parameter-value">{{city_weather.wind}}<sup class="sup-text"> kts from  {{city_weather.direction}}</sup></span>
 						</div>
 					</div> <!--End of row-->
@@ -165,7 +165,7 @@
 			</div>
 			<div class="section-1"></div>
 			<div class="section-2">
-				<img class="img-live-stream" alt="Live Stream Logo" src="{% static 'img/channel-03.png' %}">
+				<img class="img-live-stream" alt="Live Stream Logo" src="{% static 'images/channel-03.png' %}">
 				<div class="wrap">
 					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  data-interval="7000">
 						<div class="carousel-inner">
@@ -227,7 +227,7 @@
 	</div> <!--End of row-->
 
 	<div class="footer">
-		<img class="img-web-address" alt="Web-Address" src="{% static 'img/web_address.png' %}">
+		<img class="img-web-address" alt="Web-Address" src="{% static 'images/web_address.png' %}">
 		<div class="footline">
 			<marquee direction="scroll"><p><b>Today's:</b> {{rssfeed1.title1}}{{rssfeed1.lastBuildDate}}{{rssfeed1.description}} |
 					 <b>Next Following Day's:</b> 
