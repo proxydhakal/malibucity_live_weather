@@ -11,7 +11,7 @@
 <body>
 	<div class="row">
 		<div class="col-md-12 col-lg-4 left-container">
-		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="15000">
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="30000">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 				<div class="container">
@@ -25,27 +25,27 @@
 							 <marquee behavior="scroll" direction = "up" height="400" scrolldelay="4" scrollamount="4">
 								<b>Title:</b>{{rssfeed21.title1}}<br>
 								<b>Date:</b>{{rssfeed21.lastBuildDate}}<br>
-								<b>Description</b>{{rssfeed21.description}}
+								<b>Description:</b>{{rssfeed21.description}}
 								<hr>
 								<b>Title:</b>{{rssfeed22.title1}}<br>
 								<b>Date:</b>{{rssfeed22.lastBuildDate}}<br>
-								<b>Description</b>{{rssfeed22.description}}
+								<b>Description:</b>{{rssfeed22.description}}
 								<hr>
 								<b>Title:</b>{{rssfeed23.title1}}<br>
 								<b>Date:</b>{{rssfeed23.lastBuildDate}}<br>
-								<b>Description</b>{{rssfeed23.description}}
+								<b>Description:</b>{{rssfeed23.description}}
 								<hr>
 								<b>Title:</b>{{rssfeed24.title1}}<br>
 								<b>Date:</b>{{rssfeed24.lastBuildDate}}<br>
-								<b>Description</b>{{rssfeed24.description}}
+								<b>Description:</b>{{rssfeed24.description}}
 								<hr>
 								<b>Title:</b>{{rssfeed25.title1}}<br>
 								<b>Date:</b>{{rssfeed25.lastBuildDate}}<br>
-								<b>Description</b>{{rssfeed25.description}}
+								<b>Description:</b>{{rssfeed25.description}}
 								<hr>
 								<b>Title:</b>{{rssfeed26.title1}}<br>
 								<b>Date:</b>{{rssfeed26.lastBuildDate}}<br>
-								<b>Description</b>{{rssfeed26.description}}
+								<b>Description:</b>{{rssfeed26.description}}
 								</marquee>
 							</div>
 				</div><!--End of wrapper-->
@@ -53,35 +53,35 @@
 				</div>
 				<div class="carousel-item">
 				<div class="container">
-				<h3><i>Sigalert and Surf Center: Malibu</i></h3>
+				<h3><i>Surf Center: Malibu</i></h3>
 				<div class="left-box">
 					<iframe width="100%" height="300" src="https://embed.windy.com/embed2.html?lat=33.669&lon=-118.125&zoom=8&level=surface&overlay=waves&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=33.669&detailLon=-118.123&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
 				</div>
 				<div class="wrapper">
 					<div class="row">
 						<div class="col">
-							<img class="img-water-temp" src="{% static 'images/water_temp.png' %}">
+							<img class="img-water-temp" src="{% static 'img/water_temp.png' %}">
 							<span class="parameter-value">{{city_weather.water_temp}}<sup class="sup-text"> * F</sup></span>
 						</div>
 						<div class="col">
-								<img class="img-air-temp" src="{% static 'images/air_temp.png' %}">
+								<img class="img-air-temp" src="{% static 'img/air_temp.png' %}">
 								<span class="parameter-value"{{city_weather.air_temp}}<sup class="sup-text"> * F</sup></span>
 						</div>
 						<div class="w-100"></div>
 						<div class="col">
-								<img class="img-barometric" src="{% static 'images/barometric_pressure.png' %}">
+								<img class="img-barometric" src="{% static 'img/barometric_pressure.png' %}">
 								<span class="parameter-value">{{city_weather.pressure}}<sup class="sup-text"> mb</sup></span>
 						</div>
 						<div class="w-100"></div>
 						<div class="col">
-							<img class="img-gusting" src="{% static 'images/gusting_to.png' %}">
+							<img class="img-gusting" src="{% static 'img/gusting_to.png' %}">
 							<span class="parameter-value">{{city_weather.gusting}}
 								<sup class="sup-text">kts from  {{city_weather.direction}}
 								</sup>
 							</span>	
 						</div>
 						<div class="col">
-							<img class="img-winds" src="{% static 'images/winds.png' %}">
+							<img class="img-winds" src="{% static 'img/winds.png' %}">
 							<span class="parameter-value">{{city_weather.wind}}<sup class="sup-text"> kts from  {{city_weather.direction}}</sup></span>
 						</div>
 					</div> <!--End of row-->
@@ -121,13 +121,11 @@
 				<div class="carousel-item">
 				<div class="container">
 				<h3><i>Weather Center: Malibu</i></h3>
-				<div class="left-box mb-3">
-					<iframe width="100%" height="300" src="https://embed.windy.com/embed2.html?lat=33.633&lon=-118.600&zoom=9&level=surface&overlay=temp&menu=&message=&marker=&calendar=24&pressure=&type=map&location=coordinates&detail=&detailLat=33.633&detailLon=-118.600&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
+				<div class="left-boxs mb-3">
+					<iframe width="100%" height="400" src="https://embed.windy.com/embed2.html?lat=33.633&lon=-118.600&zoom=9&level=surface&overlay=temp&menu=&message=&marker=&calendar=24&pressure=&type=map&location=coordinates&detail=&detailLat=33.633&detailLon=-118.600&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
 				</div>
-				<div class="wrapper  mt-3">
+				<div class="wrappers  mt-3">
 					<a class="weatherwidget-io" href="https://forecast7.com/en/34d03n118d78/malibu/?unit=us" data-label_1="MALIBU" data-label_2="WEATHER" data-font="Times New Roman" data-icons="Climacons Animated" data-theme="original" >MALIBU WEATHER</a>
-
-
 				</div><!--End of wrapper-->
 			</div>
 				</div>
@@ -135,7 +133,7 @@
 						<div class="container">
 				<h3><i>Twitter Feed</i></h3>
 				<div class="card text-white mb-3">
-				   <a class=" card-body twitter-timeline mt-0" data-height="750" data-link-color="#2B7BB9" href="https://twitter.com/TheMalibuTimes?ref_src=twsrc%5Etfw">Tweets by TheMalibuTimes</a>  
+				 <iframe src="https://feed.mikle.com/widget/v2/118558/" height="750px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
 				</div>
 			</div>
 				</div>
@@ -167,7 +165,7 @@
 			</div>
 			<div class="section-1"></div>
 			<div class="section-2">
-				<img class="img-live-stream" alt="Live Stream Logo" src="{% static 'images/channel-03.png' %}">
+				<img class="img-live-stream" alt="Live Stream Logo" src="{% static 'img/channel-03.png' %}">
 				<div class="wrap">
 					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  data-interval="7000">
 						<div class="carousel-inner">
@@ -229,7 +227,7 @@
 	</div> <!--End of row-->
 
 	<div class="footer">
-		<img class="img-web-address" alt="Web-Address" src="{% static 'images/web_address.png' %}">
+		<img class="img-web-address" alt="Web-Address" src="{% static 'img/web_address.png' %}">
 		<div class="footline">
 			<marquee direction="scroll"><p><b>Today's:</b> {{rssfeed1.title1}}{{rssfeed1.lastBuildDate}}{{rssfeed1.description}} |
 					 <b>Next Following Day's:</b> 
