@@ -23,7 +23,11 @@ body{
 	margin:30px 15px;
 	border-collapse:collapse
 }
-
+.wrappers{
+	margin:30px 15px;
+	border-collapse:collapse
+	
+}
 h3{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.5rem!important;
@@ -34,6 +38,11 @@ h3{
 	background-color: #fff;
 	height:300px;
 }
+.left-boxs{
+	background-color: #fff;
+	height:400px;
+}
+
 
 .col{
 	border: 1px solid #fff;
