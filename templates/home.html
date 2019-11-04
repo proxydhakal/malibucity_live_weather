@@ -11,43 +11,87 @@
 <body>
 	<div class="row">
 		<div class="col-md-12 col-lg-4 left-container">
-		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="30000">
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 				<div class="container">
 				<h3><i>Traffic Center: Malibu</i></h3>
-				<div class="left-box">
+				<div class="left-box ml-3 mr-3">
 					<iframe class="w-100" src="{{city_weather.map_url}}"  height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
 				</div>
 				<div class="wrapper">
-
-						<div class="ashok">
-							 <marquee behavior="scroll" direction = "up" height="400" scrolldelay="4" scrollamount="4">
-								<b>Title:</b>{{rssfeed21.title1}}<br>
-								<b>Date:</b>{{rssfeed21.lastBuildDate}}<br>
-								<b>Description:</b>{{rssfeed21.description}}
-								<hr>
-								<b>Title:</b>{{rssfeed22.title1}}<br>
-								<b>Date:</b>{{rssfeed22.lastBuildDate}}<br>
-								<b>Description:</b>{{rssfeed22.description}}
-								<hr>
-								<b>Title:</b>{{rssfeed23.title1}}<br>
-								<b>Date:</b>{{rssfeed23.lastBuildDate}}<br>
-								<b>Description:</b>{{rssfeed23.description}}
-								<hr>
-								<b>Title:</b>{{rssfeed24.title1}}<br>
-								<b>Date:</b>{{rssfeed24.lastBuildDate}}<br>
-								<b>Description:</b>{{rssfeed24.description}}
-								<hr>
-								<b>Title:</b>{{rssfeed25.title1}}<br>
-								<b>Date:</b>{{rssfeed25.lastBuildDate}}<br>
-								<b>Description:</b>{{rssfeed25.description}}
-								<hr>
-								<b>Title:</b>{{rssfeed26.title1}}<br>
-								<b>Date:</b>{{rssfeed26.lastBuildDate}}<br>
-								<b>Description:</b>{{rssfeed26.description}}
-								</marquee>
-							</div>
+				<div class="boxesss">
+					 <marquee behavior="scroll" direction = "up" height="440" scrolldelay="4" scrollamount="4">
+						<div class="box-111">
+							<table class=".table-borderless">
+								 <col span="1" class="wide">
+								<tr class="trs">
+									<th class="ths">Title  <p style="text-align: right!important; margin-top: -45px">:</p></th>
+									<td class="tds">{{rssfeed21.title1}}</td>
+								</tr>
+								<tr class="trs">
+									<th class="ths"Date <p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<td class="tds">{{rssfeed21.lastBuildDate}}</td>
+								</tr>
+								<tr class="trs">
+									<th class="ths">Description &nbsp <p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<td class="tds">{{rssfeed21.description}}</td>
+								</tr>
+							</table>
+						</div>
+						<div class="box-222">
+							<table class="table">
+								<col span="1" class="wide">
+								<tr class="trs">
+									<th class="ths">Title <p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<td class="tds">{{rssfeed22.title1}}</td>
+								</tr>
+								<tr class="trs">
+									<th class="ths">Date <p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<td class="tds">{{rssfeed22.lastBuildDate}}</td>
+								</tr>
+								<tr class="trs">
+									<th class="ths">Description<p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<td class="tds">{{rssfeed22.description}}</td>
+								</tr>
+							</table>
+						</div>	
+						<div class="box-333">
+							<table class="table">
+								 <col span="1" class="wide">
+								<tr class="trs">
+									<th class="ths">Title  <p style="text-align: right!important; margin-top: -45px">:</p></th>
+									<td class="tds">{{rssfeed23.title1}}</td>
+								</tr>
+								<tr class="trs">
+									<th class="ths">Date <p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<td class="tds">{{rssfeed23.lastBuildDate}}</td>
+								</tr>
+								<tr class="trs">
+									<th class="ths">Description &nbsp <p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<td class="tds">{{rssfeed23.description}}</td>
+								</tr>
+							</table>
+						</div>
+						<div class="box-444">
+							<table class="table">
+								<col span="1" class="wide">
+								<tr class="trs">
+									<th class="ths">Title <p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<td class="tds">{{rssfeed24.title1}}</td>
+								</tr>
+								<tr class="trs">
+									<th class="ths">Date <p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<td class="tds">{{rssfeed24.lastBuildDate}}</td>
+								</tr>
+								<tr class="trs">
+									<th class="ths">Description<p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<td class="tds">{{rssfeed24.description}}</td>
+								</tr>
+							</table>
+						</div>	
+						</marquee>
+					</div>
 				</div><!--End of wrapper-->
 			</div>
 				</div>
@@ -65,7 +109,7 @@
 						</div>
 						<div class="col">
 								<img class="img-air-temp" src="{% static 'images/air_temp.png' %}">
-								<span class="parameter-value"{{city_weather.air_temp}}<sup class="sup-text"> * F</sup></span>
+								<span class="parameter-value">{{city_weather.air_temp}}<sup class="sup-text"> * F</sup></span>
 						</div>
 						<div class="w-100"></div>
 						<div class="col">
@@ -121,29 +165,136 @@
 				<div class="carousel-item">
 				<div class="container">
 				<h3><i>Weather Center: Malibu</i></h3>
-				<div class="left-boxs mb-3">
-					<iframe width="100%" height="400" src="https://embed.windy.com/embed2.html?lat=33.633&lon=-118.600&zoom=9&level=surface&overlay=temp&menu=&message=&marker=&calendar=24&pressure=&type=map&location=coordinates&detail=&detailLat=33.633&detailLon=-118.600&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
+				<div class="left-boxs ml-3 mr-3">
+					<iframe width="100%" height="280" src="https://embed.windy.com/embed2.html?lat=33.633&lon=-118.600&zoom=9&level=surface&overlay=temp&menu=&message=&marker=&calendar=24&pressure=&type=map&location=coordinates&detail=&detailLat=33.633&detailLon=-118.600&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
 				</div>
-				<div class="wrappers  mt-3">
-					<a class="weatherwidget-io" href="https://forecast7.com/en/34d03n118d78/malibu/?unit=us" data-label_1="MALIBU" data-label_2="WEATHER" data-font="Times New Roman" data-icons="Climacons Animated" data-theme="original" >MALIBU WEATHER</a>
+				<div class="wrappers">
+					<table class="table table-left">
+						<thead class="weather-head">
+							<div class="boxess">
+								<div class="box-11">
+									<span><p class="sup-malibu">malibu</p></span>
+								</div>
+								<div class="box-22">
+							    	<img class="head-img" src="{% static "images/03.png" %}" class="sun-cloud" alt="cloudy">
+								</div>
+								<div class="box-33">
+									<p class="head-value">68<sup class="sup-text"> * F</sup><sub class="sub-text">Clear</sub></p>
+									
+								</div>
+								<div class="box-44">
+									<span><p class="sup-now">now</p></span> -->
+								</div>
+
+							</div>
+						</thead>
+						<tbody>
+							<tr>
+							    <th>Sunday</th>
+							    <td>
+							    	<img src="{% static "images/03.png" %}" class="sun-cloud" alt="cloudy">
+							    </td>
+							    <td>
+									<p>84<sup> * F</sup></p>
+							    </td>
+							    <td>
+									<p>59<sup> * F</sup></p>
+							    </td>
+
+							</tr>
+							<tr>
+							    <th>Monday</th>
+							    <td>
+							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    </td>
+							    <td>
+									<p>75<sup> * F</sup></p>
+							    </td>
+							    <td>
+									<p>57<sup> * F</sup></p>
+							    </td>
+
+							</tr>
+							<tr>
+							    <th>Tuesday</th>
+							    <td>
+							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    </td>
+							    <td>
+									<p>79<sup> * F</sup></p>
+							    </td>
+							    <td>
+									<p>59<sup> * F</sup></p>
+							    </td>
+
+							</tr>
+							<tr>
+							    <th>Wednesday</th>
+							    <td>
+							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    </td>
+							    <td>
+									<p>77<sup> * F</sup></p>
+							    </td>
+							    <td>
+									<p>54<sup> * F</sup></p>
+							    </td>
+
+							</tr>
+							<tr>
+							    <th>Thursday</th>
+							    <td>
+							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    </td>
+							    <td>
+									<p>73<sup> * F</sup></p>
+							    </td>
+							    <td>
+									<p>57<sup> * F</sup></p>
+							    </td>
+
+							</tr>
+							<tr>
+							    <th>Friday</th>
+							    <td>
+							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    </td>
+							    <td>
+									<p>86<sup> * F</sup></p>
+							    </td>
+							    <td>
+									<p>63<sup> * F</sup></p>
+							    </td>
+
+							</tr>
+							<tr>
+							    <th>Saturday</th>
+							    <td>
+							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    </td>
+							    <td>
+									<p>86<sup> * F</sup></p>
+							    </td>
+							    <td>
+									<p>63<sup> * F</sup></p>
+							    </td>
+
+							</tr>
+						</tbody>
+					</table>
 				</div><!--End of wrapper-->
 			</div>
 				</div>
 				<div class="carousel-item">
 						<div class="container">
-				<h3><i>Twitter Feed</i></h3>
 				<div class="card text-white mb-3">
-				 <iframe src="https://feed.mikle.com/widget/v2/118558/" height="750px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
+				<iframe src="https://feed.mikle.com/widget/v2/118558/" height="800px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
 				</div>
 			</div>
 				</div>
 			<div class="carousel-item">
 					<div class="container">
-					<h3><i>Instagram Feed</i></h3>
-						<div class="card text-white mb-3">
-							<div class='sk-ww-instagram-hashtag-feed' data-embed-id='30069'></div><script src='https://www.sociablekit.com/app/embed/instagram-hashtag-feed/widget.js'></script>
-							
-						</div>
+						<iframe src="https://feed.mikle.com/widget/v2/119280/" height="800px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>	
 					</div>
 				</div>
 				<div class="carousel-item">
@@ -151,6 +302,13 @@
 					<h3><i>Comment Feed</i></h3>
 						<div class="card text-white mb-3">
 						<iframe class="card-body w-100" src="https://chat.restream.io/embed?token=befa2567-e78f-47a9-8c49-0a43224fc2ad" height="750"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						<div class="card text-white mb-3">
+						<iframe src="https://feed.mikle.com/widget/v2/119065/" height="780px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
 						</div>
 					</div>
 				</div>
@@ -170,54 +328,210 @@
 					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  data-interval="7000">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<b>Title:</b>{{rssfeed10.title1}}<br>
-								
-									{{rssfeed10.description}}
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{rssfeed10.title1}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{rssfeed10.lastBuildDate}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Description</th>
+											<td class="td-table-2">{{rssfeed10.description}}</td>
+										</tr>
+									</table>
 							</div>
 							<div class="carousel-item">
-								<b>Title:</b>{{rssfeed11.title1}}<br>
-								
-									{{rssfeed11.description|safe|truncatewords:40}}
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{rssfeed11.title1}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{rssfeed11.eventDates}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{rssfeed11.eventTimes}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Location</th>
+											<td class="td-table-2">{{rssfeed11.location}}</td>
+										</tr>
+									</table>
 							</div>
 							<div class="carousel-item">
-								<b>Title:</b>{{rssfeed12.title1}}<br>
-								
-									{{rssfeed13.description|safe|truncatewords:40}}
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{rssfeed12.title1}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{rssfeed12.eventDates}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{rssfeed12.eventTimes}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Location</th>
+											<td class="td-table-2">{{rssfeed12.location}}</td>
+										</tr>
+									</table>
 							</div>
 							<div class="carousel-item">
-								<b>Title:</b>{{rssfeed13.title1}}<br>
-								
-									{{rssfeed13.description|safe|truncatewords:40}}
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{rssfeed13.title1}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{rssfeed13.eventDates}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{rssfeed13.eventTimes}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Location</th>
+											<td class="td-table-2">{{rssfeed13.location}}</td>
+										</tr>
+									</table>
 							</div>
 							<div class="carousel-item">
-								<b>Title:</b>{{rssfeed14.title1}}<br>
-								
-									{{rssfeed14.description|safe|truncatewords:40}}
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{rssfeed14.title1}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{rssfeed14.eventDates}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{rssfeed14.eventTimes}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Location</th>
+											<td class="td-table-2">{{rssfeed14.location}}</td>
+										</tr>
+									</table>
 							</div>
 							<div class="carousel-item">
-								<b>Title:</b>{{rssfeed15.title1}}<br>
-								
-									{{rssfeed15.description|safe|truncatewords:40}}
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{rssfeed15.title1}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{rssfeed15.eventDates}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{rssfeed15.eventTimes}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Location</th>
+											<td class="td-table-2">{{rssfeed15.location}}</td>
+										</tr>
+									</table>
 							</div>
 							<div class="carousel-item">
-								<b>Title:</b>{{rssfeed16.title1}}<br>
-								
-									{{rssfeed16.description|safe|truncatewords:40}}
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{rssfeed16.title1}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{rssfeed16.eventDates}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{rssfeed16.eventTimes}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Location</th>
+											<td class="td-table-2">{{rssfeed16.location}}</td>
+										</tr>
+									</table>
 							</div>
 							<div class="carousel-item">
-								<b>Title:</b>{{rssfeed17.title1}}<br>
-								
-									{{rssfeed17.description|safe|truncatewords:40}}
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{rssfeed17.title1}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{rssfeed17.eventDates}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{rssfeed17.eventTimes}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Location</th>
+											<td class="td-table-2">{{rssfeed17.location}}</td>
+										</tr>
+									</table>
 							</div>
 							<div class="carousel-item">
-								<b>Title:</b>{{rssfeed18.title1}}<br>
-								
-									{{rssfeed18.description|safe|truncatewords:40}}
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{rssfeed18.title1}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{rssfeed18.eventDates}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{rssfeed18.eventTimes}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Location</th>
+											<td class="td-table-2">{{rssfeed18.location}}</td>
+										</tr>
+									</table>
 							</div>
 							<div class="carousel-item">
-								<b>Title:</b>{{rssfeed19.title1}}<br>
-								
-									{{rssfeed19.description|safe|truncatewords:40}}
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{rssfeed19.title1}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{rssfeed19.eventDates}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{rssfeed19.eventTimes}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Location</th>
+											<td class="td-table-2">{{rssfeed19.location}}</td>
+										</tr>
+									</table>
 							</div>
 						</div>
 						</div>
@@ -227,7 +541,7 @@
 	</div> <!--End of row-->
 
 	<div class="footer">
-		<img class="img-web-address" alt="Web-Address" src="{% static 'images/web_address.png' %}">
+		<img class="img-web-address" alt="Web-Address" height="60" src="{% static 'images/logo.png' %}">
 		<div class="footline">
 			<marquee direction="scroll"><p><b>Today's:</b> {{rssfeed1.title1}}{{rssfeed1.lastBuildDate}}{{rssfeed1.description}} |
 					 <b>Next Following Day's:</b> 
