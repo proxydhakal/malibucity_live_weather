@@ -70,8 +70,8 @@ def home(request):
     rssfeed2={'title1':title[1],'lastBuildDate':pubDate[0],'description':description[1]}
     rssfeed3={'title1':title[2],'lastBuildDate':pubDate[1],'description':description[2]}
     rssfeed4={'title1':title[3],'lastBuildDate':pubDate[2],'description':description[3]}
-    rssfeed5={'title1':title[4],'lastBuildDate':pubDate[3],'description':description[4]}
-    rssfeed6={'title1':title[5],'lastBuildDate':pubDate[4],'description':description[5]}
+    # rssfeed5={'title1':title[4],'lastBuildDate':pubDate[3],'description':description[4]}
+    #rssfeed6={'title1':title[5],'lastBuildDate':pubDate[4],'description':description[5]}
     # rssfeed7={'title1':title[6],'lastBuildDate':pubDate[5],'description':description[6]}
     # rssfeed8={'title1':title[7],'lastBuildDate':pubDate[6],'description':description[7]}
     # rssfeed9={'title1':title[8],'lastBuildDate':pubDate[7],'description':description[8]}
@@ -90,16 +90,16 @@ def home(request):
     guid1 =[data1.text for data1 in soup1.findAll('guid')]
     
     rssfeed10={'title1':title1[0],'lastBuildDate':lastBuildDate1[0],'description':description1[0]}
-    rssfeed11={'title1':title1[1],'lastBuildDate':pubDate1[0],'description':description1[1]}
-    rssfeed12={'title1':title1[2],'lastBuildDate':pubDate1[1],'description':description1[2]}
-    rssfeed13={'title1':title1[3],'lastBuildDate':pubDate1[2],'description':description1[3]}
-    rssfeed14={'title1':title1[4],'lastBuildDate':pubDate1[3],'description':description1[4]}
-    rssfeed15={'title1':title1[5],'lastBuildDate':pubDate1[4],'description':description1[5]}
-    rssfeed16={'title1':title1[6],'lastBuildDate':pubDate1[5],'description':description1[6]}
-    rssfeed17={'title1':title1[7],'lastBuildDate':pubDate1[6],'description':description1[7]}
-    rssfeed18={'title1':title1[8],'lastBuildDate':pubDate1[7],'description':description1[8]}
-    rssfeed19={'title1':title1[9],'lastBuildDate':pubDate1[8],'description':description1[9]}
-    rssfeed20={'title1':title1[10],'lastBuildDate':pubDate1[9],'description':description1[10]}
+    rssfeed11={'title1':title1[1],'lastBuildDate':pubDate1[0],'description':description1[1],'eventDates':eventDates[0],'eventTimes':eventTimes[0],'location':location[0]}
+    rssfeed12={'title1':title1[2],'lastBuildDate':pubDate1[1],'description':description1[2],'eventDates':eventDates[1],'eventTimes':eventTimes[1],'location':location[1]}
+    rssfeed13={'title1':title1[3],'lastBuildDate':pubDate1[2],'description':description1[3],'eventDates':eventDates[2],'eventTimes':eventTimes[2],'location':location[2]}
+    rssfeed14={'title1':title1[4],'lastBuildDate':pubDate1[3],'description':description1[4],'eventDates':eventDates[3],'eventTimes':eventTimes[3],'location':location[3]}
+    rssfeed15={'title1':title1[5],'lastBuildDate':pubDate1[4],'description':description1[5],'eventDates':eventDates[4],'eventTimes':eventTimes[4],'location':location[4]}
+    rssfeed16={'title1':title1[6],'lastBuildDate':pubDate1[5],'description':description1[6],'eventDates':eventDates[5],'eventTimes':eventTimes[5],'location':location[5]}
+    rssfeed17={'title1':title1[7],'lastBuildDate':pubDate1[6],'description':description1[7],'eventDates':eventDates[6],'eventTimes':eventTimes[6],'location':location[6]}
+    rssfeed18={'title1':title1[8],'lastBuildDate':pubDate1[7],'description':description1[8],'eventDates':eventDates[7],'eventTimes':eventTimes[7],'location':location[7]}
+    rssfeed19={'title1':title1[9],'lastBuildDate':pubDate1[8],'description':description1[9],'eventDates':eventDates[8],'eventTimes':eventTimes[8],'location':location[8]}
+    rssfeed20={'title1':title1[10],'lastBuildDate':pubDate1[9],'description':description1[10],'eventDates':eventDates[9],'eventTimes':eventTimes[9],'location':location[9]}
 
     r2 = requests.get('https://www.malibucity.org/RSSFeed.aspx?ModID=63&CID=Traffic-Advisories-3')
     data = r2.text
@@ -109,17 +109,17 @@ def home(request):
     description2 =[data.text for data in soup.findAll('description')]
     pubDate2 =[data.text for data in soup.findAll('pubDate')]
     rssfeed21={'title1':title2[0],'lastBuildDate':lastBuildDate2[0],'description':description2[0]}
-    rssfeed22={'title1':title2[1],'lastBuildDate':pubDate2[0],'description':description2[1]}
+    #rssfeed22={'title1':title2[1],'lastBuildDate':pubDate2[0],'description':description2[1]}
     #rssfeed23={'title1':title2[2],'lastBuildDate':pubDate2[1],'description':description2[2]}
     #rssfeed24={'title1':title2[3],'lastBuildDate':pubDate2[2],'description':description2[3]}
     # rssfeed25={'title1':title2[4],'lastBuildDate':pubDate2[3],'description':description2[4]}
     # rssfeed26={'title1':title2[5],'lastBuildDate':pubDate2[4],'description':description2[5]}
 
     context={"city_weather":city_weather,"nwsForecast":nwsForecast,"rssfeed1":rssfeed1,"rssfeed2":rssfeed2,"rssfeed3":rssfeed3,"rssfeed4":rssfeed4,
-    "rssfeed5":rssfeed5,"rssfeed6":rssfeed6,"rssfeed7":rssfeed6,"rssfeed8":rssfeed5,"rssfeed9":rssfeed4,"rssfeed10":rssfeed10,
+    "rssfeed5":rssfeed3,"rssfeed6":rssfeed2,"rssfeed7":rssfeed1,"rssfeed8":rssfeed4,"rssfeed9":rssfeed4,"rssfeed10":rssfeed10,
     "rssfeed11":rssfeed11,"rssfeed12":rssfeed12,"rssfeed13":rssfeed13,"rssfeed14":rssfeed14,"rssfeed15":rssfeed15 ,"rssfeed16":rssfeed16 ,"rssfeed17":rssfeed17
-    ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20,"rssfeed21":rssfeed21,"rssfeed22":rssfeed22,"rssfeed23":rssfeed21,"rssfeed24":rssfeed22
-    ,"rssfeed25":rssfeed22,"rssfeed26":rssfeed21
+    ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20,"rssfeed21":rssfeed21,"rssfeed22":rssfeed21,"rssfeed23":rssfeed21,"rssfeed24":rssfeed21
+    ,"rssfeed25":rssfeed21,"rssfeed26":rssfeed21
     }
     
 
