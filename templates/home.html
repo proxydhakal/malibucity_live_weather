@@ -8,6 +8,362 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 </head>
+	<style>
+	body{
+	background-color: #1f0b16!important; /* For browsers that do not support gradients */
+	background-image: linear-gradient(to top left, #191418, #30032a, #1f262d, #072a46  );
+	width: 99.1%;
+	height: auto;
+	background-repeat: no-repeat;
+}
+
+.container{
+	margin: 25px;
+	padding-right: 0!important;
+}
+
+.ashok{
+	border: 1px solid #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5rem!important;
+	color: #fff;
+
+}
+/****Left Container****/
+.wrapper{
+	margin:30px 15px;
+	border-collapse:collapse
+}
+.wrappers{
+	margin:30px 15px;
+	border-collapse:collapse
+	
+}
+h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5rem!important;
+	color: #fff;
+}
+
+.left-box{
+	background-color: #fff;
+	height:300px;
+}
+.left-boxs{
+	background-color: #fff;
+	height:270px;
+}
+
+
+.col{
+	border: 1px solid #fff;
+	height: 80px;
+}
+
+.img-water-temp, .img-air-temp, .img-gusting{
+	padding: 10px 0px;
+}
+
+.img-water-temp{
+	width: 55px;
+}
+
+.img-air-temp{
+	width: 40px;
+}
+
+.img-barometric{
+	width: 260px;
+	padding: 12px 8px 12px 140px;
+}
+
+.img-gusting{
+	width: 44px;
+}
+
+.img-winds{
+	width: 44px;
+	padding: 12px 0px;
+}
+
+.parameter-value{
+	font-family: 'Oswald', sans-serif;
+	font-size: 2.4rem;
+	color: #fff;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+.unit{ 
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.5rem;
+}
+.sup-text{
+	font-size: 1.2rem;
+	color: #fff;
+}
+
+table{
+	margin-top: 45px;
+	margin-bottom: 40px!important;
+}
+th, td {
+	padding: 2px!important;
+	color: #fff;
+	text-align: center;
+	font-size: 22px;
+  }
+
+  thead {
+	  border-bottom: 1px solid #fff;
+	  text-align: center;
+  }
+/****Right Container****/
+.col-mg-8, .col-lg-8{
+	padding: 0!important;
+}
+
+.headline{
+	height: 60px;
+	color: #fff;
+	width: 100%;
+	line-height: 60px;
+	font-size: 26px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #052035 ;
+	overflow: hidden;
+	border-right: 12px solid #C1272D;
+	border-left: 12px solid #C1272D;
+}
+
+.section-1{
+	background-color: #281C26;
+	height: 560px;
+	width: 100%;
+}
+
+.section-2{
+	border-left: 12px solid #C1272D;
+	height: 280px;
+	width: 100%;
+}
+
+.wrap{
+	padding: 12px 12px 5px 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+}
+h6{
+	line-height: 1.8rem!important;
+}
+.boxesss{
+	height: 445px;
+	border: 2px solid #fff;
+}
+
+.box-111{
+	height: 50%;
+	border-bottom: 2px solid #5a3f56;
+}
+
+.box-222{
+	height: 50%;
+	border-bottom: 2px solid #5a3f56;
+}
+.box-333{
+	height: 50%;
+	border-bottom: 2px solid #5a3f56;
+}
+.box-444{
+	height: 50%;
+	border-bottom: 2px solid #5a3f56;
+}
+.boxes{
+	height: 445px;
+	border: 2px solid #fff;
+}
+
+.box-1{
+	height: 50%;
+	border-bottom: 2px solid #5a3f56;
+}
+
+.box-2{
+    height: 50%;
+    border-bottom: 2px solid #5a3f56;
+}
+.box-3{
+	height: 50%;
+	border-bottom: 2px solid #5a3f56;
+}
+
+.box-4{
+    height: 50%;
+    border-bottom: 2px solid #5a3f56;
+}
+
+.boxess {
+	width: 100%;
+	border: 2px solid #fff;
+	display: flex;
+  }
+  
+  .box-11, .box-22, .box-33, .box-44 {
+	height: 70px;
+	/*background: #000;*/
+	margin: 1px;
+  }
+  
+  .box-11{
+	width: 20%;
+	padding:0px 5px;
+  }
+  
+  .box-22{
+	width: 20%;
+  }
+  
+  .box-33{
+	width: 50%;
+  }
+  
+  .box-44{
+	width: 10%;
+	padding: 0px 5px;
+  }
+  
+  .head-img{
+	  width: 70px;
+	  padding: 5px;
+  }
+  
+  .head-value{
+	  font-size: 36px;
+	  font-family: 'Oswald', sans-serif;
+  }
+  
+  .sup-malibu{
+	  font-family: 'Oswald', sans-serif;
+  }
+  
+  .sup-now{
+	  font-family: 'Oswald', sans-serif;
+	  text-align: right;
+  }
+  .sup-text, .sub-text{
+	  font-family: 'Oswald', sans-serif;
+	  font-size: 1.2rem;
+	  color: #fff;
+  }
+  
+  .weather-head{
+	  border: 2px solid #fff;
+	  height: 70px;
+  }
+  
+  .sun-cloud{
+	  width: 30px;
+  }
+  .table-left{
+	font-family: 'Oswald', sans-serif;
+	
+}  
+th, td {
+	padding: 3px 5px!important;
+	color: #fff;
+	font-size: 22px;
+	border-top: none !important;
+}
+
+tr{
+	border: 1px solid #5a3f56;
+}
+
+th{
+	line-height: 2;
+}
+
+p{
+	margin-bottom: 0rem !important;
+	line-height: 2;
+	color: #fff;
+}
+.table{
+	font-family: 'Arial';
+	table-layout:fixed;
+
+}
+
+.ths, .tds{
+	color: #fff;
+	padding: 3px 5px!important;
+	border:none!important;
+	font-size: 22px;
+	border: 1px solid #5a3f56;
+	line-height: 2;
+
+}
+.wide {
+ 	width: 180px;
+}
+
+.tds{
+ 	white-space: nowrap;
+  	overflow: hidden!important;
+  	text-overflow:clip;
+}
+
+.ths{
+	line-height: 2;
+}
+
+.th-table-2, .td-table-2{
+	padding:0px 15px!important;
+	color: #fff;
+	font-size: 22px;
+	border-top: none !important;
+
+}
+
+.td-table-2{
+	border: 1px solid #5a3f56!important;
+	line-height: 2;
+}
+
+.img-live-stream{
+	width: 120px;
+	position: absolute;
+	top: 90%;
+	margin-left: 85%;
+}
+/*****Footer Headline ******/
+.footline{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	color: #fff;
+	line-height: 60px;
+	font-size: 26px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #052035 ;
+	overflow: hidden;
+	border-right: 12px solid #C1272D;
+}
+
+.img-web-address{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 320px;
+	z-index: 1;
+
+}
+	
+	
+	
+	</style>
 <body>
 	<div class="row">
 		<div class="col-md-12 col-lg-4 left-container">
