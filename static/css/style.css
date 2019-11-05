@@ -24,7 +24,7 @@ body{
 	border-collapse:collapse
 }
 .wrappers{
-	margin:30px 15px;
+	margin:20px 10px;
 	border-collapse:collapse
 	
 }
@@ -40,7 +40,7 @@ h3{
 }
 .left-boxs{
 	background-color: #fff;
-	height:270px;
+	height:300px;
 }
 
 
@@ -92,20 +92,20 @@ h3{
 	color: #fff;
 }
 
-table{
+/* table{
 	margin-top: 45px;
 	margin-bottom: 40px!important;
-}
+} */
 th, td {
 	padding: 2px!important;
 	color: #fff;
-	text-align: center;
+	text-align: left;
 	font-size: 22px;
   }
 
-  thead {
+thead {
 	  border-bottom: 1px solid #fff;
-	  text-align: center;
+	  text-align: left;
   }
 /****Right Container****/
 .col-mg-8, .col-lg-8{
@@ -296,11 +296,11 @@ p{
  	width: 180px;
 }
 
-.tds{
+/* .tds{
  	white-space: nowrap;
   	overflow: hidden!important;
   	text-overflow:clip;
-}
+} */
 
 .ths{
 	line-height: 2;
