@@ -8,11 +8,10 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 </head>
-
 <body>
 	<div class="row">
 		<div class="col-md-12 col-lg-4 left-container">
-		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="30000">
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 				<div class="container">
@@ -24,14 +23,14 @@
 				<div class="boxesss">
 					 <marquee behavior="scroll" direction = "up" height="440" scrolldelay="4" scrollamount="4">
 						<div class="box-111">
-							<table class=".table-borderless">
+							<table class="table">
 								 <col span="1" class="wide">
 								<tr class="trs">
 									<th class="ths">Title  <p style="text-align: right!important; margin-top: -45px">:</p></th>
 									<td class="tds">{{rssfeed21.title1}}</td>
 								</tr>
 								<tr class="trs">
-									<th class="ths"Date <p style="text-align: right!important; margin-top: -45px;">:</p></th>
+									<th class="ths">Date <p style="text-align: right!important; margin-top: -45px;">:</p></th>
 									<td class="tds">{{rssfeed21.lastBuildDate}}</td>
 								</tr>
 								<tr class="trs">
@@ -99,39 +98,39 @@
 				<div class="carousel-item">
 				<div class="container">
 				<h3><i>Surf Center: Malibu</i></h3>
-				<div class="left-box">
+				<div class="left-box ml-3 mr-3">
 					<iframe width="100%" height="300" src="https://embed.windy.com/embed2.html?lat=33.669&lon=-118.125&zoom=8&level=surface&overlay=waves&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=33.669&detailLon=-118.123&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
 				</div>
 				<div class="wrapper">
-					<div class="row">
+					<div class="row ml-1 mr-1">
 						<div class="col">
-							<img class="img-water-temp" src="{% static 'images/water_temp.png' %}">
+							<img class="img-water-temp" src="{% static 'img/water_temp.png' %}">
 							<span class="parameter-value">{{city_weather.water_temp}}<sup class="sup-text"> * F</sup></span>
 						</div>
 						<div class="col">
-								<img class="img-air-temp" src="{% static 'images/air_temp.png' %}">
+								<img class="img-air-temp" src="{% static 'img/air_temp.png' %}">
 								<span class="parameter-value">{{city_weather.air_temp}}<sup class="sup-text"> * F</sup></span>
 						</div>
 						<div class="w-100"></div>
 						<div class="col">
-								<img class="img-barometric" src="{% static 'images/barometric_pressure.png' %}">
+								<img class="img-barometric" src="{% static 'img/barometric_pressure.png' %}">
 								<span class="parameter-value">{{city_weather.pressure}}<sup class="sup-text"> mb</sup></span>
 						</div>
 						<div class="w-100"></div>
 						<div class="col">
-							<img class="img-gusting" src="{% static 'images/gusting_to.png' %}">
+							<img class="img-gusting" src="{% static 'img/gusting_to.png' %}">
 							<span class="parameter-value">{{city_weather.gusting}}
 								<sup class="sup-text">kts from  {{city_weather.direction}}
 								</sup>
 							</span>	
 						</div>
 						<div class="col">
-							<img class="img-winds" src="{% static 'images/winds.png' %}">
+							<img class="img-winds" src="{% static 'img/winds.png' %}">
 							<span class="parameter-value">{{city_weather.wind}}<sup class="sup-text"> kts from  {{city_weather.direction}}</sup></span>
 						</div>
 					</div> <!--End of row-->
 
-					<table class="table table-borderless">
+					<table class="mt-2 table">
 						<thead>
 							<tr>
 								<th scope="col">TIME</th>
@@ -166,8 +165,8 @@
 				<div class="carousel-item">
 				<div class="container">
 				<h3><i>Weather Center: Malibu</i></h3>
-				<div class="left-boxs ml-3 mr-3">
-					<iframe width="100%" height="280" src="https://embed.windy.com/embed2.html?lat=33.633&lon=-118.600&zoom=9&level=surface&overlay=temp&menu=&message=&marker=&calendar=24&pressure=&type=map&location=coordinates&detail=&detailLat=33.633&detailLon=-118.600&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
+				<div class="left-boxs ml-2 mr-2">
+					<iframe width="100%" height="300" src="https://embed.windy.com/embed2.html?lat=33.633&lon=-118.600&zoom=9&level=surface&overlay=temp&menu=&message=&marker=&calendar=24&pressure=&type=map&location=coordinates&detail=&detailLat=33.633&detailLon=-118.600&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
 				</div>
 				<div class="wrappers">
 					<table class="table table-left">
@@ -177,7 +176,7 @@
 									<span><p class="sup-malibu">malibu</p></span>
 								</div>
 								<div class="box-22">
-							    	<img class="head-img" src="{% static "images/03.png" %}" class="sun-cloud" alt="cloudy">
+							    	<img class="head-img" src="{% static "img/03.png" %}" class="sun-cloud" alt="cloudy">
 								</div>
 								<div class="box-33">
 									<p class="head-value">68<sup class="sup-text"> * F</sup><sub class="sub-text">Clear</sub></p>
@@ -193,7 +192,7 @@
 							<tr>
 							    <th>Sunday</th>
 							    <td>
-							    	<img src="{% static "images/03.png" %}" class="sun-cloud" alt="cloudy">
+							    	<img src="{% static "img/03.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
 									<p>84<sup> * F</sup></p>
@@ -206,7 +205,7 @@
 							<tr>
 							    <th>Monday</th>
 							    <td>
-							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    	<img src="{% static "img/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
 									<p>75<sup> * F</sup></p>
@@ -219,7 +218,7 @@
 							<tr>
 							    <th>Tuesday</th>
 							    <td>
-							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    	<img src="{% static "img/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
 									<p>79<sup> * F</sup></p>
@@ -232,7 +231,7 @@
 							<tr>
 							    <th>Wednesday</th>
 							    <td>
-							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    	<img src="{% static "img/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
 									<p>77<sup> * F</sup></p>
@@ -245,7 +244,7 @@
 							<tr>
 							    <th>Thursday</th>
 							    <td>
-							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    	<img src="{% static "img/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
 									<p>73<sup> * F</sup></p>
@@ -258,7 +257,7 @@
 							<tr>
 							    <th>Friday</th>
 							    <td>
-							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    	<img src="{% static "img/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
 									<p>86<sup> * F</sup></p>
@@ -271,7 +270,7 @@
 							<tr>
 							    <th>Saturday</th>
 							    <td>
-							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
+							    	<img src="{% static "img/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
 									<p>86<sup> * F</sup></p>
@@ -324,7 +323,7 @@
 			</div>
 			<div class="section-1"></div>
 			<div class="section-2">
-				<img class="img-live-stream" alt="Live Stream Logo" src="{% static 'images/channel-03.png' %}">
+				<img class="img-live-stream" alt="Live Stream Logo" src="{% static 'img/channel-03.png' %}">
 				<div class="wrap">
 					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  data-interval="7000">
 						<div class="carousel-inner">
@@ -542,7 +541,7 @@
 	</div> <!--End of row-->
 
 	<div class="footer">
-		<img class="img-web-address" alt="Web-Address" height="60" src="{% static 'images/logo.png' %}">
+		<img class="img-web-address" alt="Web-Address" height="60" src="{% static 'img/logo.png' %}">
 		<div class="footline">
 			<marquee direction="scroll"><p><b>Today's:</b> {{rssfeed1.title1}}{{rssfeed1.lastBuildDate}}{{rssfeed1.description}} |
 					 <b>Next Following Day's:</b> 
