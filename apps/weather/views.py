@@ -109,8 +109,8 @@ def home(request):
     description2 =[data.text for data in soup.findAll('description')]
     pubDate2 =[data.text for data in soup.findAll('pubDate')]
     rssfeed21={'title1':title2[0],'lastBuildDate':lastBuildDate2[0],'description':description2[0]}
-    #rssfeed22={'title1':title2[1],'lastBuildDate':pubDate2[0],'description':description2[1]}
-    #rssfeed23={'title1':title2[2],'lastBuildDate':pubDate2[1],'description':description2[2]}
+    rssfeed22={'title1':title2[1],'lastBuildDate':pubDate2[0],'description':description2[1]}
+    rssfeed23={'title1':title2[2],'lastBuildDate':pubDate2[1],'description':description2[2]}
     #rssfeed24={'title1':title2[3],'lastBuildDate':pubDate2[2],'description':description2[3]}
     # rssfeed25={'title1':title2[4],'lastBuildDate':pubDate2[3],'description':description2[4]}
     # rssfeed26={'title1':title2[5],'lastBuildDate':pubDate2[4],'description':description2[5]}
