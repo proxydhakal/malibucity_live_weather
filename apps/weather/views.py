@@ -160,7 +160,7 @@ def home(request):
     pubDate2 =[data.text for data in soup.findAll('pubDate')]
     rssfeed21={'title1':title2[0],'lastBuildDate':lastBuildDate2[0],'description':description2[0]}
     rssfeed22={'title1':title2[1],'lastBuildDate':pubDate2[0],'description':description2[1]}
-    rssfeed23={'title1':title2[2],'lastBuildDate':pubDate2[1],'description':description2[2]}
+    #rssfeed23={'title1':title2[2],'lastBuildDate':pubDate2[1],'description':description2[2]}
     #rssfeed24={'title1':title2[3],'lastBuildDate':pubDate2[2],'description':description2[3]}
     # rssfeed25={'title1':title2[4],'lastBuildDate':pubDate2[3],'description':description2[4]}
     # rssfeed26={'title1':title2[5],'lastBuildDate':pubDate2[4],'description':description2[5]}
@@ -168,7 +168,7 @@ def home(request):
     context={"city_weather":city_weather,"nwsForecast":nwsForecast,"rssfeed1":rssfeed1,"rssfeed2":rssfeed2,"rssfeed3":rssfeed3,"rssfeed4":rssfeed4,
     "rssfeed5":rssfeed3,"rssfeed6":rssfeed2,"rssfeed7":rssfeed1,"rssfeed8":rssfeed4,"rssfeed9":rssfeed4,"rssfeed10":rssfeed10,
     "rssfeed11":rssfeed11,"rssfeed12":rssfeed12,"rssfeed13":rssfeed13,"rssfeed14":rssfeed14,"rssfeed15":rssfeed15 ,"rssfeed16":rssfeed16 ,"rssfeed17":rssfeed17
-    ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20,"rssfeed21":rssfeed21,"rssfeed22":rssfeed21,"rssfeed23":rssfeed21,"rssfeed24":rssfeed21
+    ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20,"rssfeed21":rssfeed21,"rssfeed22":rssfeed22,"rssfeed23":rssfeed21,"rssfeed24":rssfeed21
     ,"rssfeed25":rssfeed21,"rssfeed26":rssfeed21,"event1":event1,"event2":event2,"event3":event3,"event4":event4,"event5":event5,"event6":event6,"event7":event7,
     }
     
