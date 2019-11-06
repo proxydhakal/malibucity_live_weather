@@ -16,13 +16,63 @@ def home(request):
     pressure_url='https://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station={}&product=air_pressure&datum=STND&time_zone=lst_ldt&units=english&format=json'
     wind='https://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station={}&product=wind&datum=STND&time_zone=lst_ldt&units=english&format=json'
     tide='https://tidesandcurrents.noaa.gov/api/datagetter?date=recent&station={}&product=predictions&datum=STND&time_zone=lst_ldt&interval=hilo&units=english&format=json'
+    events='https://www.eventbriteapi.com/v3/events/search/?q=malibu&location.address=malibu&start_date.keyword=this_week&token=JQOHPNTPZIPX666CZJRL'
+    malibu_events = requests.get(events).json()
     airTemp = requests.get(airTemp_url.format(station)).json()
     waterTemp = requests.get(waterTemp_url.format(station)).json()
     pressure = requests.get(pressure_url.format(station)).json()
     wind = requests.get(wind.format(station)).json()
     tide = requests.get(tide.format(station)).json()
     map_url='https://www.sigalert.com/map.asp?lat=34.08402&lon=-118.52828&z=2'
-    
+    event1={
+        'title':malibu_events['events'][0]['name']['text'],
+        'description':malibu_events['events'][0]['summary'],
+        'date':malibu_events['events'][0]['start']['local'].split('T')[0],
+        'time':malibu_events['events'][0]['start']['local'].split('T')[1],
+        'status':malibu_events['events'][0]['status']
+    }
+    event2={
+        'title':malibu_events['events'][1]['name']['text'],
+        'description':malibu_events['events'][1]['summary'],
+        'date':malibu_events['events'][1]['start']['local'].split('T')[0],
+        'time':malibu_events['events'][1]['start']['local'].split('T')[1],
+        'status':malibu_events['events'][1]['status']
+    }
+    event3={
+        'title':malibu_events['events'][2]['name']['text'],
+        'description':malibu_events['events'][2]['summary'],
+        'date':malibu_events['events'][2]['start']['local'].split('T')[0],
+        'time':malibu_events['events'][2]['start']['local'].split('T')[1],
+        'status':malibu_events['events'][2]['status']
+    }
+    event4={
+        'title':malibu_events['events'][3]['name']['text'],
+        'description':malibu_events['events'][3]['summary'],
+        'date':malibu_events['events'][3]['start']['local'].split('T')[0],
+        'time':malibu_events['events'][3]['start']['local'].split('T')[1],
+        'status':malibu_events['events'][3]['status']
+    }
+    event5={
+        'title':malibu_events['events'][4]['name']['text'],
+        'description':malibu_events['events'][4]['summary'],
+        'date':malibu_events['events'][4]['start']['local'].split('T')[0],
+        'time':malibu_events['events'][4]['start']['local'].split('T')[1],
+        'status':malibu_events['events'][4]['status']
+    }
+    event6={
+        'title':malibu_events['events'][5]['name']['text'],
+        'description':malibu_events['events'][5]['summary'],
+        'date':malibu_events['events'][5]['start']['local'].split('T')[0],
+        'time':malibu_events['events'][5]['start']['local'].split('T')[1],
+        'status':malibu_events['events'][5]['status']
+    }
+    event7={
+        'title':malibu_events['events'][6]['name']['text'],
+        'description':malibu_events['events'][6]['summary'],
+        'date':malibu_events['events'][6]['start']['local'].split('T')[0],
+        'time':malibu_events['events'][6]['start']['local'].split('T')[1],
+        'status':malibu_events['events'][6]['status']
+    }
     city_weather={
         'city':airTemp['metadata']['name'],
         'air_temp':airTemp['data'][0]['v'],
@@ -118,8 +168,8 @@ def home(request):
     context={"city_weather":city_weather,"nwsForecast":nwsForecast,"rssfeed1":rssfeed1,"rssfeed2":rssfeed2,"rssfeed3":rssfeed3,"rssfeed4":rssfeed4,
     "rssfeed5":rssfeed3,"rssfeed6":rssfeed2,"rssfeed7":rssfeed1,"rssfeed8":rssfeed4,"rssfeed9":rssfeed4,"rssfeed10":rssfeed10,
     "rssfeed11":rssfeed11,"rssfeed12":rssfeed12,"rssfeed13":rssfeed13,"rssfeed14":rssfeed14,"rssfeed15":rssfeed15 ,"rssfeed16":rssfeed16 ,"rssfeed17":rssfeed17
-    ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20,"rssfeed21":rssfeed21,"rssfeed22":rssfeed22,"rssfeed23":rssfeed23,"rssfeed24":rssfeed21
-    ,"rssfeed25":rssfeed21,"rssfeed26":rssfeed21
+    ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20,"rssfeed21":rssfeed21,"rssfeed22":rssfeed21,"rssfeed23":rssfeed21,"rssfeed24":rssfeed21
+    ,"rssfeed25":rssfeed21,"rssfeed26":rssfeed21,"event1":event1,"event2":event2,"event3":event3,"event4":event4,"event5":event5,"event6":event6,"event7":event7,
     }
     
 
