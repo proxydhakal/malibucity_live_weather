@@ -6,7 +6,7 @@
 	
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -180,7 +180,7 @@
 							    	<img class="head-img" src="{% static "images/03.png" %}" class="sun-cloud" alt="cloudy">
 								</div>
 								<div class="box-33">
-									<p class="head-value">68<sup class="sup-text"> * F</sup><sub class="sub-text">Clear</sub></p>
+									<p class="head-value">63<sup class="sup-text"> * F</sup><sub class="sub-text">Clear</sub></p>
 									
 								</div>
 								<div class="box-44">
@@ -196,10 +196,10 @@
 							    	<img src="{% static "images/03.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
-									<p>84<sup> * F</sup></p>
+									<p>76<sup> * F</sup></p>
 							    </td>
 							    <td>
-									<p>59<sup> * F</sup></p>
+									<p>58<sup> * F</sup></p>
 							    </td>
 
 							</tr>
@@ -209,10 +209,10 @@
 							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
-									<p>75<sup> * F</sup></p>
+									<p>74<sup> * F</sup></p>
 							    </td>
 							    <td>
-									<p>57<sup> * F</sup></p>
+									<p>59<sup> * F</sup></p>
 							    </td>
 
 							</tr>
@@ -222,10 +222,10 @@
 							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
-									<p>79<sup> * F</sup></p>
+									<p>75<sup> * F</sup></p>
 							    </td>
 							    <td>
-									<p>59<sup> * F</sup></p>
+									<p>58<sup> * F</sup></p>
 							    </td>
 
 							</tr>
@@ -235,7 +235,7 @@
 							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
-									<p>77<sup> * F</sup></p>
+									<p>69<sup> * F</sup></p>
 							    </td>
 							    <td>
 									<p>54<sup> * F</sup></p>
@@ -248,10 +248,10 @@
 							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
-									<p>73<sup> * F</sup></p>
+									<p>70<sup> * F</sup></p>
 							    </td>
 							    <td>
-									<p>57<sup> * F</sup></p>
+									<p>59<sup> * F</sup></p>
 							    </td>
 
 							</tr>
@@ -261,10 +261,10 @@
 							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
-									<p>86<sup> * F</sup></p>
+									<p>78<sup> * F</sup></p>
 							    </td>
 							    <td>
-									<p>63<sup> * F</sup></p>
+									<p>62<sup> * F</sup></p>
 							    </td>
 
 							</tr>
@@ -274,10 +274,10 @@
 							    	<img src="{% static "images/02.png" %}" class="sun-cloud" alt="cloudy">
 							    </td>
 							    <td>
-									<p>86<sup> * F</sup></p>
+									<p>78<sup> * F</sup></p>
 							    </td>
 							    <td>
-									<p>63<sup> * F</sup></p>
+									<p>60<sup> * F</sup></p>
 							    </td>
 
 							</tr>
@@ -295,7 +295,7 @@
 				</div>
 			<div class="carousel-item">
 					<div class="container">
-						<iframe src="https://feed.mikle.com/widget/v2/119280/" height="800px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>	
+						<iframe src="https://feed.mikle.com/widget/v2/119280/" height="800px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>		
 					</div>
 				</div>
 				<div class="carousel-item">
@@ -536,6 +536,181 @@
 										<tr class="tr-table-2">
 											<th class="th-table-2">Location</th>
 											<td class="td-table-2">{{rssfeed19.location}}</td>
+										</tr>
+									</table>
+							</div>
+							<div class="carousel-item">
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{event1.title}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{event1.date}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{event1.time}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Description</th>
+											<td class="td-table-2">{{event1.description}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Status</th>
+											<td class="td-table-2">{{event1.status}}</td>
+										</tr>
+									</table>
+							</div>
+							<div class="carousel-item">
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{event2.title}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{event2.date}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{event2.time}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Description</th>
+											<td class="td-table-2">{{event2.description}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Status</th>
+											<td class="td-table-2">{{event2.status}}</td>
+										</tr>
+									</table>
+							</div>
+							<div class="carousel-item">
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{event3.title}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{event3.date}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{event3.time}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Description</th>
+											<td class="td-table-2">{{event3.description}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Status</th>
+											<td class="td-table-2">{{event3.status}}</td>
+										</tr>
+									</table>
+							</div>
+							<div class="carousel-item">
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{event4.title}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{event4.date}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{event4.time}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Description</th>
+											<td class="td-table-2">{{event4.description}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Status</th>
+											<td class="td-table-2">{{event4.status}}</td>
+										</tr>
+									</table>
+							</div>
+							<div class="carousel-item">
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{event5.title}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{event5.date}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{event5.time}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Description</th>
+											<td class="td-table-2">{{event5.description}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Status</th>
+											<td class="td-table-2">{{event5.status}}</td>
+										</tr>
+									</table>
+							</div>
+							<div class="carousel-item">
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{event6.title}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{event6.date}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{event6.time}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Description</th>
+											<td class="td-table-2">{{event6.description}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Status</th>
+											<td class="td-table-2">{{event6.status}}</td>
+										</tr>
+									</table>
+							</div>
+							<div class="carousel-item">
+									<table class="table ">
+										<col span="1" class="wide">
+										<tr class="tr-table-2">
+											<th class="th-table-2">Title</th>
+											<td class="td-table-2">{{event7.title}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Date</th>
+											<td class="td-table-2">{{event7.date}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Event Time</th>
+											<td class="td-table-2">{{event7.time}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Description</th>
+											<td class="td-table-2">{{event7.description}}</td>
+										</tr>
+										<tr class="tr-table-2">
+											<th class="th-table-2">Status</th>
+											<td class="td-table-2">{{event7.status}}</td>
 										</tr>
 									</table>
 							</div>
