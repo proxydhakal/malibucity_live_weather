@@ -187,6 +187,7 @@ def home(request):
     "rssfeed11":rssfeed11,"rssfeed12":rssfeed12,"rssfeed13":rssfeed13,"rssfeed14":rssfeed14,"rssfeed15":rssfeed15 ,"rssfeed16":rssfeed16 ,"rssfeed17":rssfeed17
     ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20,"rssfeed21":rssfeed21,"rssfeed22":rssfeed21,"rssfeed23":rssfeed21,"rssfeed24":rssfeed21
     ,"rssfeed25":rssfeed21,"rssfeed26":rssfeed21,"event1":event1,"event2":event2,"event3":event3,"event4":event4,"event5":event5,"event6":event6,"event7":event7,
+    "event8":event8,"event9":event9,"event10":event10
     }
     
 
