@@ -16,8 +16,14 @@ def home(request):
     pressure_url='https://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station={}&product=air_pressure&datum=STND&time_zone=lst_ldt&units=english&format=json'
     wind='https://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station={}&product=wind&datum=STND&time_zone=lst_ldt&units=english&format=json'
     tide='https://tidesandcurrents.noaa.gov/api/datagetter?date=recent&station={}&product=predictions&datum=STND&time_zone=lst_ldt&interval=hilo&units=english&format=json'
-    events='https://www.eventbriteapi.com/v3/events/search/?q=malibu&location.address=malibu&start_date.keyword=this_week&token=JQOHPNTPZIPX666CZJRL'
-    malibu_events = requests.get(events).json()
+    base_url='https://www.eventbrite.com/d/ca--los-angeles/events--this-week/malibu/?page=1'
+    requestes = urllib.request.Request(base_url)
+    html = urllib.request.urlopen(requestes).read()
+    soup = BeautifulSoup(html,'lxml')
+    divs =soup.findAll('div')
+    contentDiv =soup.find('div',attrs={'class':'eds-l-pad-hor-1'})
+    title =[data.text for data in contentDiv.findAll('div',attrs={'class':'eds-event-card__formatted-name--is-clamped'})]
+    date =[data.text for data in contentDiv.findAll('div',attrs={'class':'eds-l-mar-top-1'})]
     airTemp = requests.get(airTemp_url.format(station)).json()
     waterTemp = requests.get(waterTemp_url.format(station)).json()
     pressure = requests.get(pressure_url.format(station)).json()
@@ -25,53 +31,64 @@ def home(request):
     tide = requests.get(tide.format(station)).json()
     map_url='https://www.sigalert.com/map.asp?lat=34.08402&lon=-118.52828&z=2'
     event1={
-        'title':malibu_events['events'][0]['name']['text'],
-        'description':malibu_events['events'][0]['summary'],
-        'date':malibu_events['events'][0]['start']['local'].split('T')[0],
-        'time':malibu_events['events'][0]['start']['local'].split('T')[1],
-        'status':malibu_events['events'][0]['status']
+        'title':title[0],
+        'date':date[0],
+        'location':date[1],
+        'entry':date[2]
     }
     event2={
-        'title':malibu_events['events'][1]['name']['text'],
-        'description':malibu_events['events'][1]['summary'],
-        'date':malibu_events['events'][1]['start']['local'].split('T')[0],
-        'time':malibu_events['events'][1]['start']['local'].split('T')[1],
-        'status':malibu_events['events'][1]['status']
+        'title':title[1],
+        'date':date[4],
+        'location':date[5],
+        'entry':date[6]
     }
     event3={
-        'title':malibu_events['events'][2]['name']['text'],
-        'description':malibu_events['events'][2]['summary'],
-        'date':malibu_events['events'][2]['start']['local'].split('T')[0],
-        'time':malibu_events['events'][2]['start']['local'].split('T')[1],
-        'status':malibu_events['events'][2]['status']
+        'title':title[2],
+        'date':date[8],
+        'location':date[9],
+        'entry':date[10]
     }
     event4={
-        'title':malibu_events['events'][3]['name']['text'],
-        'description':malibu_events['events'][3]['summary'],
-        'date':malibu_events['events'][3]['start']['local'].split('T')[0],
-        'time':malibu_events['events'][3]['start']['local'].split('T')[1],
-        'status':malibu_events['events'][3]['status']
+        'title':title[3],
+        'date':date[12],
+        'location':date[13],
+        'entry':date[14]
     }
     event5={
-        'title':malibu_events['events'][4]['name']['text'],
-        'description':malibu_events['events'][4]['summary'],
-        'date':malibu_events['events'][4]['start']['local'].split('T')[0],
-        'time':malibu_events['events'][4]['start']['local'].split('T')[1],
-        'status':malibu_events['events'][4]['status']
+        'title':title[4],
+        'date':date[16],
+        'location':date[17],
+        'entry':date[18]
     }
     event6={
-        'title':malibu_events['events'][5]['name']['text'],
-        'description':malibu_events['events'][5]['summary'],
-        'date':malibu_events['events'][5]['start']['local'].split('T')[0],
-        'time':malibu_events['events'][5]['start']['local'].split('T')[1],
-        'status':malibu_events['events'][5]['status']
+        'title':title[5],
+        'date':date[20],
+        'location':date[21],
+        'entry':date[22]
     }
     event7={
-        'title':malibu_events['events'][6]['name']['text'],
-        'description':malibu_events['events'][6]['summary'],
-        'date':malibu_events['events'][6]['start']['local'].split('T')[0],
-        'time':malibu_events['events'][6]['start']['local'].split('T')[1],
-        'status':malibu_events['events'][6]['status']
+        'title':title[6],
+        'date':date[24],
+        'location':date[25],
+        'entry':date[26]
+    }
+    event8={
+        'title':title[7],
+        'date':date[28],
+        'location':date[29],
+        'entry':date[30]
+    }
+    event9={
+        'title':title[8],
+        'date':date[32],
+        'location':date[33],
+        'entry':date[34]
+    }
+    event10={
+        'title':title[9],
+        'date':date[36],
+        'location':date[37],
+        'entry':date[38]
     }
     city_weather={
         'city':airTemp['metadata']['name'],
@@ -160,7 +177,7 @@ def home(request):
     pubDate2 =[data.text for data in soup.findAll('pubDate')]
     rssfeed21={'title1':title2[0],'lastBuildDate':lastBuildDate2[0],'description':description2[0]}
     rssfeed22={'title1':title2[1],'lastBuildDate':pubDate2[0],'description':description2[1]}
-    #rssfeed23={'title1':title2[2],'lastBuildDate':pubDate2[1],'description':description2[2]}
+    rssfeed23={'title1':title2[2],'lastBuildDate':pubDate2[1],'description':description2[2]}
     #rssfeed24={'title1':title2[3],'lastBuildDate':pubDate2[2],'description':description2[3]}
     # rssfeed25={'title1':title2[4],'lastBuildDate':pubDate2[3],'description':description2[4]}
     # rssfeed26={'title1':title2[5],'lastBuildDate':pubDate2[4],'description':description2[5]}
@@ -168,7 +185,7 @@ def home(request):
     context={"city_weather":city_weather,"nwsForecast":nwsForecast,"rssfeed1":rssfeed1,"rssfeed2":rssfeed2,"rssfeed3":rssfeed3,"rssfeed4":rssfeed4,
     "rssfeed5":rssfeed3,"rssfeed6":rssfeed2,"rssfeed7":rssfeed1,"rssfeed8":rssfeed4,"rssfeed9":rssfeed4,"rssfeed10":rssfeed10,
     "rssfeed11":rssfeed11,"rssfeed12":rssfeed12,"rssfeed13":rssfeed13,"rssfeed14":rssfeed14,"rssfeed15":rssfeed15 ,"rssfeed16":rssfeed16 ,"rssfeed17":rssfeed17
-    ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20,"rssfeed21":rssfeed21,"rssfeed22":rssfeed22,"rssfeed23":rssfeed21,"rssfeed24":rssfeed21
+    ,"rssfeed18":rssfeed18 ,"rssfeed19":rssfeed19,"rssfeed20":rssfeed20,"rssfeed21":rssfeed21,"rssfeed22":rssfeed21,"rssfeed23":rssfeed21,"rssfeed24":rssfeed21
     ,"rssfeed25":rssfeed21,"rssfeed26":rssfeed21,"event1":event1,"event2":event2,"event3":event3,"event4":event4,"event5":event5,"event6":event6,"event7":event7,
     }
     
